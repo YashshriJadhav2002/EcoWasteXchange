@@ -10,6 +10,7 @@ import Company_register from './Components/Register/Company_register';
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
@@ -18,6 +19,9 @@ function App() {
       <Route path="/contact" element={<Login />} />
       <Route path='/signup' element={<Seller_register />}></Route>
     </Routes>
+=======
+      <Home/>
+>>>>>>> 702db3d1fa937a2dc9682147d04ff32945fe78eb
     </div>
   );
 }
