@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Reem Kufi", sans-serif !important;
+  overflow-y: hidden; 
+  overflow-x: hidden; 
 }
 img {
   max-width: 100%;
@@ -26,7 +28,7 @@ body {
 nav {
   display: flex;
   align-items: center;
-  margin-left: -30px;  
+    
   margin-top: 20px;
   justify-content: space-between;
   min-height: 10px;
@@ -44,6 +46,9 @@ nav {
   font-size: 1.2rem;
   font-weight: 600;
   
+}
+.navbar-links-container a:hover {
+  background: rgb(53, 218, 116);
 }
 
 .navbar-cart-icon {

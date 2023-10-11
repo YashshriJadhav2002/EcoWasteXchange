@@ -89,7 +89,7 @@ const SellerRegister = () => {
         </div>
         <div className="submit-container">
           <button type="submit" className="submit">Sign Up</button>
-          <div className="submit">Login</div>
+          <button className="submit" onClick={event => window.location.href='/login'}>Login</button>
         </div>
       </form>
     </div>

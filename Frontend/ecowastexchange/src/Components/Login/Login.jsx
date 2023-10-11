@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import SellerRegister from '../Register/Seller_register';
 //  import email_icon from "../Components/Login/email.png";
 //  import password_icon from '../Components/Login/password.png';
 
@@ -27,6 +29,8 @@ const Login = () => {
         </div>
         <div className="submit-container">
           <button type="submit" className="submit">Login</button>
+          
+          <button type="signup" className="submit" onClick={event => window.location.href='/signup'} >Sign Up</button>
         </div>
       </form>
     </div>
