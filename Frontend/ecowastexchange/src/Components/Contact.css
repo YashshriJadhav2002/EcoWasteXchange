@@ -1,16 +1,16 @@
 /* Vision container*/
-.vision-container{
+.contact-container{
     display: flex;
     flex-direction: column;
-    margin-left: 110vh;
-    width:550px;
-    height: 400px;
+    margin-left: 30vh;
+    width:1000px;
+    height: 450px;
     margin-top: 10vh;
     background: #fff;
     padding-bottom:10px;
     padding-top: 30px;
-    padding-left: 30px;
-    border-radius:60px;
+    padding-left: 600px;
+    
     font-family: 'Abril Fatface', cursive;
     }
   

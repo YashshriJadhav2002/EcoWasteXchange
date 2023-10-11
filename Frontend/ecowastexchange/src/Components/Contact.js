@@ -9,7 +9,7 @@ import vision from "../Images/Vision.png";
     
     <div >
          
-         <div className="vision-container">
+      <div className="contact-container">
       <h1 style={{color: "green"}}>Contact Us</h1><br></br>
       <p>
       Phone Number : 8459777201 <br></br>
