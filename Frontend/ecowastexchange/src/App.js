@@ -24,8 +24,9 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path='/signup' element={<Seller_register />}></Route>
     </Routes>
+    
     </div>
   );
 }
 
-export default App;
+export default App
