@@ -1,9 +1,6 @@
 import React from 'react';
-import './Login.css'
-import { Link } from 'react-router-dom';
-import SellerRegister from '../Register/Seller_register';
-//  import email_icon from "../Components/Login/email.png";
-//  import password_icon from '../Components/Login/password.png';
+import '../../../src/Styles/Login.css'
+
 
 const Login = () => {
   const handleLogin = (e) => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import './AboutUs.css'
-import AboutUs from "../Images/about_us.png";
+import '../../../src/Styles/AboutUs.css'
+import AboutUs from '../../../src/Images/About_us.jpg';
 
 
     const InfoContainer = () => 

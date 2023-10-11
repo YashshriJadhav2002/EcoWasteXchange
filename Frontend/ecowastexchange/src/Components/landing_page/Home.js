@@ -1,9 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
-import './Home.css';
-import BannerBackground from "../Images/home-banner-background.png";
-import BannerImage from "../Images/home-banner-image.png";
-import BackgroundImage from "../Images/background.jpg";
+import '../../../src/Styles/Home.css'
+import BannerImage from '../../../src/Images/home-banner-image.png';
 
 
 const Home = () => {
