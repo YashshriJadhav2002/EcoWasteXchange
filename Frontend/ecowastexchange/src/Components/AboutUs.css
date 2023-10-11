@@ -1,0 +1,23 @@
+/* About us container*/
+.info-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 700px;
+    width:550px;
+    height: 400px;
+    margin-top: -65vh;
+    background: #fff;
+    padding-bottom:10px;
+    padding-top: 30px;
+    padding-left: 30px;
+    border-radius:60px;
+    
+    font-family: 'Abril Fatface', cursive;
+    }
+  
+    .aboutusimage{
+        margin-left: 10vh;
+      height: 100h;
+      width: 30vw;
+      margin-top: 10vh;
+    }

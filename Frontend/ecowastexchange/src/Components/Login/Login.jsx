@@ -1,4 +1,5 @@
 import React from 'react';
+import './Login.css'
 import { Link } from 'react-router-dom';
 import SellerRegister from '../Register/Seller_register';
 //  import email_icon from "../Components/Login/email.png";
