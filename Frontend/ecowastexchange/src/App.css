@@ -219,9 +219,30 @@ nav {
       margin-right: 10px;
       margin-bottom: 50px;
       font-family:cursive;
-      
-  
-      
+ 
   
     }
-    
+    /* Style for the dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+  flex-direction: column;
+  margin-left:450px;
+  padding: 0;
+  display:flex;
+  
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+}

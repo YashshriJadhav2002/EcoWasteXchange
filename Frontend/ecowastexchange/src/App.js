@@ -9,7 +9,7 @@ import Company_register from './Components/Register/Company_register';
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Home/>
     </div>
   );
 }
