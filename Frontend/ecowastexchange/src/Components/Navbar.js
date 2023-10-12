@@ -30,7 +30,7 @@ const Navbar = () => {
         {loginMenuOpen && (
           <div className="dropdown-menu">
             {loginMenuOptions.map((option, index) => (
-              <a href="#" key={option}>
+              <a href={option} key={option}>
                 {option}
               </a>
             ))}
