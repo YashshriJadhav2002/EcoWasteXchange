@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../src/Styles/Login.css'
+import '../../Styles/Login.css'
 
 
 const Login = () => {
@@ -9,18 +9,18 @@ const Login = () => {
   };
 
   return (
-    <div className='container'>
-      <div className="header">
-        <div className="text">Login</div>
-        <div className="underline"></div>
+    <div className='container1'>
+      <div className="loginheader">
+        <div className="logintext">Login</div>
+        <div className="loginunderline"></div>
       </div>
       <form onSubmit={handleLogin}>
-        <div className="inputs">
-          <div className="input">
+        <div className="logininputs">
+          <div className="logininput">
             {/* <img src={email_icon} alt=""/> */}
             <input type="email" placeholder="Email"/>
           </div>
-          <div className="input">
+          <div className="logininput">
             {/* <img src={password_icon} alt=""/> */}
             <input type="password" placeholder='Password'/>
           </div>
