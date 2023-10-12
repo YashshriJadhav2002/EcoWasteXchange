@@ -113,6 +113,7 @@ const SellerRegister = () => {
         </div>
       </form>
     </div>
+    
   );
 };
 
