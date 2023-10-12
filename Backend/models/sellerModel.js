@@ -5,22 +5,38 @@ const SellerSchema = new schema({
 
     Name : {
         type: String,
-        required: true
+        
     },
 
     Phone: {
         type: Number,
-        required: true
+        
+        unique:true
     },
 
     Address: {
         type: String,
-        required: true
+     
+    },
+    City:
+    {
+        type:String,
+       
+    
+    },
+    State:{
+        type:String,
+    
     },
 
-    Email: {
+    Email:{
         type: String,
-        required: true
+       
+        unique:true
+    },
+    Password:{
+        type:String,
+        
     }
 
 })
