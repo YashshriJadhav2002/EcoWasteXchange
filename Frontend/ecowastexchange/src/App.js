@@ -1,14 +1,13 @@
 import './App.css';
-import Home from './Components/Home';
+import Home from './Components/landing_page/Home';
 import { Route,Routes } from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Vision from './Components/Vision'
+import Navbar from './Components/landing_page/Navbar';
+import Vision from './Components/landing_page/Vision'
 import Seller_register from './Components/Register/Seller_register';
 import Login from './Components/Login/Login';
-import About_us from './Components/About_us';
-import Contact from './Components/Contact'
-import Vendor_register from './Components/Register/Vendor_register';
-import Company_register from './Components/Register/Company_register';
+import About_us from './Components/landing_page/About_us';
+import Contact from './Components/landing_page/Contact'
+
 
 
 function App() {

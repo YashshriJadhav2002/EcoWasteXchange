@@ -1,8 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
-import './Home.css';
-import Login from './Login/Login';
-import Logo from "../Images/Logo.png";
+import '../../../src/Styles/Home.css'
+import Logo from '../../../src/Images/Logo.png';
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 

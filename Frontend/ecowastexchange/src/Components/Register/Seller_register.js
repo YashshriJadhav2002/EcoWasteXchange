@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Register.css'
+import '../../../src/Styles/Register.css'
 const SellerRegister = () => {
   const [formData, setFormData] = useState({
     name: '',

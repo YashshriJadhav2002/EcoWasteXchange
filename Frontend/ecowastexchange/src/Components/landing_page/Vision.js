@@ -1,6 +1,6 @@
 import React from 'react';
-import './Vision.css'
-import vision from "../Images/Vision.png";
+import '../../../src/Styles/Vision.css'
+import vision from '../../../src/Images/Vision.png';
 
 
     const InfoContainer = () => 
