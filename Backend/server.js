@@ -4,9 +4,13 @@ const express = require('express')
 const mongoose = require('mongoose')
 
 //Importing routes
-const buyerRoutes = require('./routes/sellerRoutes')
-const sellerRoutes = require('./routes/sellerRoutes')
-const companyModel = require('./models/companyModel')
+const buyerRegister = require('./routes/buyerRegister')
+const sellerRegister = require('./routes/sellerRegister')
+const companyRegister = require('./routes/companyRegister')
+const companyLogin = require('./routes/companyLogin')
+const buyerLogin = require('./routes/buyerLogin')
+const sellerLogin = require('./routes/sellerLogin')
+
 
 const app = express()
 
@@ -20,7 +24,12 @@ app.use((req, res, next) => {
 })
 
 //route for seller
-app.use('/api/sellers', sellerRoutes)
+app.use('/api/seller/register', sellerRegister)
+app.use('/api/buyer/register', buyerRegister)
+app.use('/api/company/register', companyRegister)
+app.use('/api/seller/login', sellerLogin)
+app.use('/api/buyer/login', buyerLogin)
+app.use('/api/company/login', companyLogin)
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
