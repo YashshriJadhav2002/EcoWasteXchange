@@ -2,14 +2,18 @@ import React from 'react';
 import location from '../../../src/Images/location.png';
 import email from '../../../src/Images/email.png';
 import phone from '../../../src/Images/phone.png';
+import instagram from '../../../src/Images/instagram.png';
+import twitter from '../../../src/Images/twitter.png';
+import facebook from '../../../src/Images/facebook.png';
+import linkedin from '../../../src/Images/linkedin.png';
 import '../../../src/Styles/Contact.css';
-import 'social-icons'
+
 
 const Contact = () => {
   return (
 <body>
-    <div class="contact-container">
-      <span class="big-circle"></span>
+    <div >
+      <span ></span>
       <img src="img/shape.png" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
@@ -21,32 +25,32 @@ const Contact = () => {
           <div class="info">
             <div class="information">
               <img src={location} class="icon" alt="" />
-              <p>92 Cherry Drive Uniondale, NY 11553</p>
+              <p>House Of Peace, Shanti Nagar, Pune</p>
             </div>
             <div class="information">
               <img src={email} class="icon" alt="" />
-              <p>lorem@ipsum.com</p>
+              <p>rutuja.bhoyar@cumminscollege.in</p>
             </div>
             <div class="information">
               <img src={phone} class="icon" alt="" />
-              <p>123-456-789</p>
+              <p>9579385191</p>
             </div>
           </div>
 
           <div class="social-media">
             <p>Connect with us :</p>
             <div class="social-icons">
-              <a href="#">
-                <i class="fab fa-facebook-f"></i>
+              <a href="https://instagram.com/the_economic_times?igshid=MzRlODBiNWFlZA==">
+              <img src={instagram}  alt="" />
               </a>
-              <a href="#">
-                <i class="fab fa-twitter"></i>
+              <a href="https://twitter.com/">
+              <img src={twitter} alt="" />
               </a>
-              <a href="#">
-                <i class="fab fa-instagram"></i>
+              <a href="https://www.facebook.com/EconomicTimes">
+              <img src={facebook} style={{ height: '5vh' }}alt="" />
               </a>
-              <a href="#">
-                <i class="fab fa-linkedin-in"></i>
+              <a href="https://www.linkedin.com/in/rutuja-bhoyar-2953b7247">
+              <img src={linkedin} alt="" />
               </a>
             </div>
           </div>
@@ -58,22 +62,22 @@ const Contact = () => {
 
           <form action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
-            <div class="input-container">
+            <div class="inputvalues-container">
               <input type="text" name="name" class="contact-input" />
               <label for="">Username</label>
               <span>Username</span>
             </div>
-            <div class="input-container">
+            <div class="inputvalues-container">
               <input type="email" name="email" class="contact-input" />
               <label for="">Email</label>
               <span>Email</span>
             </div>
-            <div class="input-container">
+            <div class="inputvalues-container">
               <input type="tel" name="phone" class="contact-input" />
               <label for="">Phone</label>
               <span>Phone</span>
             </div>
-            <div class="input-container textarea">
+            <div class="inputvalues-container textarea">
               <textarea name="message" class="contact-input"></textarea>
               <label for="">Message</label>
               <span>Message</span>
