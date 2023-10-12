@@ -1,8 +1,12 @@
 
+<<<<<<< HEAD
 
 
 
 .login-container{
+=======
+.container1{
+>>>>>>> 875328957d12d587e5c0a0d5f17884e4efbc59e7
     display: flex;
     flex-direction: column;
     margin:auto;
@@ -24,7 +28,7 @@
       width:30px;
   
     }
-    .header
+    .loginheader
     {
         display: flex;
         flex-direction: column;
@@ -33,16 +37,23 @@
         width:100%;
         margin-top: 30px;
     }
+<<<<<<< HEAD
     .login-text
+=======
+    .logintext
+>>>>>>> 875328957d12d587e5c0a0d5f17884e4efbc59e7
     {
       font-family: 'Abril Fatface', cursive;
-  
         color: #0d542f;
         font-size:38px;
         font-weight:600;
     }
     
+<<<<<<< HEAD
     .login-underline 
+=======
+    .loginunderline
+>>>>>>> 875328957d12d587e5c0a0d5f17884e4efbc59e7
     {
         width: 61px;
         height:6px;
@@ -52,13 +63,21 @@
         margin-top: 0px;
         margin-bottom: 50px;
     }
+<<<<<<< HEAD
     .login-inputs{
+=======
+    .logininputs{
+>>>>>>> 875328957d12d587e5c0a0d5f17884e4efbc59e7
         margin: top 80px;
         display:flex;
         flex-direction:column;
         gap:10px;
     }
+<<<<<<< HEAD
     .login-input{
+=======
+    .logininput{
+>>>>>>> 875328957d12d587e5c0a0d5f17884e4efbc59e7
         display:flex;
         margin-top: 5px;
         align-items:center;
@@ -66,7 +85,7 @@
         width:400px;
         height:50px;
         background: #eaeaea;
-        border-radius:6px;
+
         margin-bottom: 20px;
     }
     .input img{
@@ -75,7 +94,11 @@
         margin-left:10px;
     }
     
+<<<<<<< HEAD
     .login-input input{
+=======
+    .logininput input{
+>>>>>>> 875328957d12d587e5c0a0d5f17884e4efbc59e7
         height: 50px;
         width:400px;
         background: transparent;
