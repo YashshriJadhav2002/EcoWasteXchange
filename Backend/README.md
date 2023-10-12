@@ -12,4 +12,7 @@ For connecting .env file to dotenv object
 - npm install dotenv
 
 For validation 
-npm install express-validator
+- npm install express-validator
+
+For encryption
+- npm install bcrypt
