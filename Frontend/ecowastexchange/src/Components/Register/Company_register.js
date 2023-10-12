@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import './Register.css'
+import '../../../src/Styles/Register.css'
 const CompanyRegister = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     address: '',
     email: '',
+     city: '',
+    state: '',
     profilePhoto: null,
     document: null, // New property for the additional image
   });
@@ -33,14 +35,14 @@ const CompanyRegister = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='register-container'>
       <div className="header">
-        <div className="text">Register</div>
-        <div className="underline"></div>
+        <div className="register-text">Register</div>
+        <div className="register-underline"></div>
       </div>
       <form onSubmit={handleSubmit}>
-        <div className="inputs">
-          <div className="input">
+        <div className="register-inputs">
+          <div className="register-input">
             <input
               type="text"
               name="name"
@@ -49,7 +51,7 @@ const CompanyRegister = () => {
               onChange={handleInputChange}
             />
           </div>
-          <div className="input">
+          <div className="register-input">
             <input
               type="text"
               name="phone"
@@ -58,7 +60,7 @@ const CompanyRegister = () => {
               onChange={handleInputChange}
             />
           </div>
-          <div className="input">
+          <div className="register-input">
             <input
               type="text"
               name="address"
@@ -67,7 +69,7 @@ const CompanyRegister = () => {
               onChange={handleInputChange}
             />
           </div>
-          <div className="input">
+          <div className="register-input">
             <input
               type="email"
               name="email"
@@ -76,9 +78,27 @@ const CompanyRegister = () => {
               onChange={handleInputChange}
             />
           </div>
+          <div className="register-input">
+            <input
+              type="city"
+              name="city"
+              placeholder="City"
+              value={formData.city}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="register-input">
+            <input
+              type="state"
+              name="state"
+              placeholder="State"
+              value={formData.state}
+              onChange={handleInputChange}
+            />
+          </div>
         </div>
         <div>
-          <div className="upload-image">
+          <div className="register-upload-image">
             <label htmlFor="profile-photo">Upload profile photo</label>
             <input
               id="profile-photo"
@@ -87,7 +107,7 @@ const CompanyRegister = () => {
               onChange={(e) => handleImageChange(e, "profilePhoto")}
             />
           </div>
-          <div className="upload-image">
+          <div className="register-upload-image">
             <label htmlFor="Document">Upload Document</label>
             <input
               id="Document"
@@ -97,9 +117,9 @@ const CompanyRegister = () => {
             />
           </div>
         </div>
-        <div className="submit-container">
-          <button type="submit" className="submit">Sign Up</button>
-          <div className="submit" onClick={event => window.location.href='/login'}>Login</div>
+        <div className="register-submit-container">
+          <button type="register-submit" className="register-submit">Sign Up</button>
+          <div className="register-submit" onClick={event => window.location.href='/login'}>Login</div>
         </div>
       </form>
     </div>

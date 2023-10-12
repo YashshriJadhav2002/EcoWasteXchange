@@ -6,7 +6,9 @@ import Vision from './Components/landing_page/Vision'
 import Seller_register from './Components/Register/Seller_register';
 import Login from './Components/Login/Login';
 import About_us from './Components/landing_page/About_us';
-import Contact from './Components/landing_page/Contact'
+import Contact from './Components/landing_page/Contact';
+import VendorRegister from './Components/Register/Vendor_register';
+import CompanyRegister from './Components/Register/Company_register';
 
 
 

@@ -3,8 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Reem Kufi", sans-serif !important;
-  overflow-y: hidden; 
-  overflow-x: hidden; 
+  
   letter-spacing: 1.5;
   line-height: 1.5;
   
@@ -18,7 +17,6 @@ img {
 
 body {
   
-  overflow-x: hidden;
   background-color:rgb(211, 247, 210) ;
 }
 
