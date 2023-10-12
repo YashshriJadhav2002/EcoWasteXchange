@@ -1,32 +1,34 @@
 import React from 'react';
-
-import '../../../src/Styles/Contact.css'
+import location from '../../../src/Images/location.png';
+import email from '../../../src/Images/email.png';
+import phone from '../../../src/Images/phone.png';
+import '../../../src/Styles/Contact.css';
+import 'social-icons'
 
 const Contact = () => {
   return (
 <body>
-    <div class="container">
+    <div class="contact-container">
       <span class="big-circle"></span>
       <img src="img/shape.png" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
           <h3 class="title">Let's get in touch</h3>
           <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            dolorum adipisci recusandae praesentium dicta!
+            
           </p>
 
           <div class="info">
             <div class="information">
-              <img src="img/location.png" class="icon" alt="" />
+              <img src={location} class="icon" alt="" />
               <p>92 Cherry Drive Uniondale, NY 11553</p>
             </div>
             <div class="information">
-              <img src="img/email.png" class="icon" alt="" />
+              <img src={email} class="icon" alt="" />
               <p>lorem@ipsum.com</p>
             </div>
             <div class="information">
-              <img src="img/phone.png" class="icon" alt="" />
+              <img src={phone} class="icon" alt="" />
               <p>123-456-789</p>
             </div>
           </div>
@@ -57,22 +59,22 @@ const Contact = () => {
           <form action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
-              <input type="text" name="name" class="input" />
+              <input type="text" name="name" class="contact-input" />
               <label for="">Username</label>
               <span>Username</span>
             </div>
             <div class="input-container">
-              <input type="email" name="email" class="input" />
+              <input type="email" name="email" class="contact-input" />
               <label for="">Email</label>
               <span>Email</span>
             </div>
             <div class="input-container">
-              <input type="tel" name="phone" class="input" />
+              <input type="tel" name="phone" class="contact-input" />
               <label for="">Phone</label>
               <span>Phone</span>
             </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
+              <textarea name="message" class="contact-input"></textarea>
               <label for="">Message</label>
               <span>Message</span>
             </div>
@@ -87,5 +89,3 @@ const Contact = () => {
 export default Contact; 
 
 
-
-    

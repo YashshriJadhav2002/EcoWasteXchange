@@ -6,6 +6,8 @@ const SellerRegister = () => {
     phone: '',
     address: '',
     email: '',
+    city: '',
+    state: '',
     image: null,
   });
 
@@ -32,14 +34,14 @@ const SellerRegister = () => {
   };
 
   return (
-    <div className='container'>
+    <div className='register-container'>
       <div className="header">
-        <div className="text">Register</div>
-        <div className="underline"></div>
+        <div className="register-text">Register</div>
+        <div className="register-underline"></div>
       </div>
       <form onSubmit={handleSubmit}>
-        <div className="inputs">
-          <div className="input">
+        <div className="register-inputs">
+          <div className="register-input">
             <input
               type="text"
               name="name"
@@ -48,7 +50,7 @@ const SellerRegister = () => {
               onChange={handleInputChange}
             />
           </div>
-          <div className="input">
+          <div className="register-input">
             <input
               type="text"
               name="phone"
@@ -57,7 +59,7 @@ const SellerRegister = () => {
               onChange={handleInputChange}
             />
           </div>
-          <div className="input">
+          <div className="register-input">
             <input
               type="text"
               name="address"
@@ -66,7 +68,7 @@ const SellerRegister = () => {
               onChange={handleInputChange}
             />
           </div>
-          <div className="input">
+          <div className="register-input">
             <input
               type="email"
               name="email"
@@ -75,9 +77,27 @@ const SellerRegister = () => {
               onChange={handleInputChange}
             />
           </div>
+          <div className="register-input">
+            <input
+              type="city"
+              name="city"
+              placeholder="City"
+              value={formData.city}
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="register-input">
+            <input
+              type="state"
+              name="state"
+              placeholder="State"
+              value={formData.state}
+              onChange={handleInputChange}
+            />
+          </div>
         </div>
         <div>
-          <div className="upload-image">
+          <div className="register-upload-image">
             <label htmlFor="image">Upload profile photo</label>
             <input
               id="image"
@@ -87,9 +107,9 @@ const SellerRegister = () => {
             />
           </div>
         </div>
-        <div className="submit-container">
-          <button type="submit" className="submit">Sign Up</button>
-          <button className="submit" onClick={event => window.location.href='/login'}>Login</button>
+        <div className="register-submit-container">
+          <button type="register-submit" className="register-submit">Sign Up</button>
+          <button className="register-submit" onClick={event => window.location.href='/login'}>Login</button>
         </div>
       </form>
     </div>

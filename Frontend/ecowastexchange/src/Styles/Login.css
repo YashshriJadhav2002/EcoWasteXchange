@@ -1,5 +1,8 @@
 
-.container1{
+
+
+
+.login-container{
     display: flex;
     flex-direction: column;
     margin:auto;
@@ -10,6 +13,7 @@
     border-radius:60px;
     margin-top: 40px;
     font-family: 'Abril Fatface', cursive;
+    height: 520px;
     }
 
    
@@ -27,33 +31,36 @@
         align-items:center;
         gap:9px;
         width:100%;
-        margin-top: 30px;
+        
     }
-    .logintext
+    .login-text
     {
+        margin-top: 30px;
       font-family: 'Abril Fatface', cursive;
         color: #0d542f;
         font-size:38px;
         font-weight:600;
     }
     
-    .loginunderline
+    .login-underline 
     {
         width: 61px;
         height:6px;
         background: #0d542f;
         border-radius:9px;
         gap : 50px;
+        margin-top: 0px;
         margin-bottom: 50px;
     }
-    .logininputs{
+    .login-inputs{
         margin: top 80px;
         display:flex;
         flex-direction:column;
         gap:10px;
     }
-    .logininput{
+    .login-input{
         display:flex;
+        margin-top: 5px;
         align-items:center;
         margin:auto;
         width:400px;
@@ -68,7 +75,7 @@
         margin-left:10px;
     }
     
-    .logininput input{
+    .login-input input{
         height: 50px;
         width:400px;
         background: transparent;
@@ -78,14 +85,14 @@
         margin-left: 20px;
     
     }
-    .submit-container{
+    .login-submit-container{
         display:flex;
         gap:20px;
-        column-gap: 0px;
+        column-gap: 80px;
         margin:40px;
-        margin-left: 0px;
+        margin-left: 60px;
     }
-    .submit{
+    .login-submit{
         display:flex;
         justify-content:center;
         align-items: center;
@@ -98,7 +105,7 @@
         font-size:19px;
         font-weight: 700;
         cursor:pointer;
-        margin-left: 100px;
+        margin-left: 0px;
         font-family: 'Abril Fatface', cursive;
   
     }

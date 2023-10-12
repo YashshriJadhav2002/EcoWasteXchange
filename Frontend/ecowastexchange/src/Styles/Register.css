@@ -1,20 +1,23 @@
 
-
-
-
-.container{
+.register-container{
     display: flex;
     flex-direction: column;
     margin:auto;
     width:550px;
-    margin-top: 100px;
+    margin-top: 5vh;
     background: #fff;
-    padding-bottom:30px;
     border-radius:60px;
-    margin-top: 40px;
+    padding-top: 0px;
+    padding-left: 0px;
     font-family: 'Abril Fatface', cursive;
+    margin-bottom: 10px;
+    height: 750px;
     }
-
+.body
+{
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
    
     .uploadimage
     {
@@ -30,38 +33,38 @@
         align-items:center;
         gap:9px;
         width:100%;
-        margin-top: 30px;
+       
     }
-    .text
+    .register-text
     {
       font-family: 'Abril Fatface', cursive;
-  
+        margin-top: 0vh;
         color: #0d542f;
         font-size:38px;
         font-weight:600;
     }
     
-    .underline
+    .register-underline
     {
         width: 61px;
         height:6px;
         background: #0d542f;
         border-radius:9px;
-        gap : 50px;
-        margin-bottom: 50px;
+        margin-top: -1vh;
+        
     }
-    .inputs{
-        margin: top 80px;
+    .register-inputs{
+        margin-top: -20px;
         display:flex;
         flex-direction:column;
         gap:10px;
     }
-    .input{
+    .register-input{
         display:flex;
         align-items:center;
         margin:auto;
         width:400px;
-        height:50px;
+        height:40px;
         background: #eaeaea;
         border-radius:6px;
         margin-bottom: 20px;
@@ -72,7 +75,7 @@
         margin-left:10px;
     }
     
-    .input input{
+    .register-input input{
         height: 50px;
         width:400px;
         background: transparent;
@@ -82,54 +85,45 @@
         margin-left: 20px;
     
     }
-    .submit-container{
+    .register-submit-container{
         display:flex;
         gap:20px;
+        margin-top: 20px;
         column-gap: 0px;
         margin:40px;
-        margin-left: 0px;
+        margin-left: -100px;
     }
-    .submit{
+    .register-submit{
         display:flex;
         justify-content:center;
         align-items: center;
-        width:130px;
+        width:150px;
         height:59px;
-        column-gap: 30px;
+        column-gap: 10px;
         color:#fff;
         background:#0d542f;
         border-radius: 50px;
         font-size:19px;
         font-weight: 700;
         cursor:pointer;
-        margin-left: 100px;
+        margin-left: 150px;
         font-family: 'Abril Fatface', cursive;
   
     }
     
-    .submit_Company_register{
-      display:flex;
-      justify-content:center;
-      align-items: center;
-      width:180px;
-      height:59px;
-      color:#fff;
-      background:#0d542f;
-      border-radius: 50px;
-      font-size:19px;
-      font-weight: 700;
-      cursor:pointer;
-      margin-left: 70px;
-  }
-  .upload-image {
-    margin-bottom:20px; /* Adjust the top margin as needed */
+  
+  
+  .register-upload-image {
+    margin-bottom:1vh; 
+    margin-left: 50px;
+    margin-top: 10px;/* Adjust the top margin as needed */
   }
   
-    .upload-image label {
-      margin-left: 80px;
+    .register-upload-image label {
+      margin-left:1px;
       margin-top: 100px;
-      margin-right: 10px;
-      margin-bottom: 50px;
+      margin-right: 10vh;
+      margin-bottom: 0px;
       font-family:cursive;
  
   

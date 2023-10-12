@@ -9,26 +9,26 @@ const Login = () => {
   };
 
   return (
-    <div className='container1'>
-      <div className="loginheader">
-        <div className="logintext">Login</div>
-        <div className="loginunderline"></div>
+    <div className='login-container'>
+      <div className="header">
+        <div className="login-text">Login</div>
+        <div className="login-underline"></div>
       </div>
       <form onSubmit={handleLogin}>
-        <div className="logininputs">
-          <div className="logininput">
+        <div className="login-inputs">
+          <div className="login-input">
             {/* <img src={email_icon} alt=""/> */}
             <input type="email" placeholder="Email"/>
           </div>
-          <div className="logininput">
+          <div className="login-input">
             {/* <img src={password_icon} alt=""/> */}
             <input type="password" placeholder='Password'/>
           </div>
         </div>
-        <div className="submit-container">
-          <button type="submit" className="submit">Login</button>
+        <div className="login-submit-container">
+          <button type="login-submit" className="login-submit">Login</button>
           
-          <button type="signup" className="submit" onClick={event => window.location.href='/signup'} >Sign Up</button>
+          <button type="signup" className="login-submit" onClick={event => window.location.href='/signup'} >Sign Up</button>
         </div>
       </form>
     </div>
