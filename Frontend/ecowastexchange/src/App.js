@@ -22,6 +22,9 @@ function App() {
       <Route path="/vision" element={<Vision />} />
       <Route path="/contact" element={<Contact />} />
       <Route path='/signup' element={<Seller_register />}></Route>
+      <Route path="/seller" element={<Login />} />
+      <Route path="/vendor" element={<Login />} />
+      <Route path="/company" element={<Login />} />
     </Routes>
     
     </div>
