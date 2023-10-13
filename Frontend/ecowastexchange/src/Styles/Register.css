@@ -1,3 +1,9 @@
+.spanmsg
+{
+  color: red;
+  margin-left: 4vw;
+  margin-top:-2vh;
+}
 
 .register-container{
     display: flex;
@@ -11,7 +17,7 @@
     padding-left: 0px;
     font-family: 'Abril Fatface', cursive;
     margin-bottom: 10px;
-    height: 750px;
+    height:auto;
     }
 .body
 {
