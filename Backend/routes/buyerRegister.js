@@ -13,7 +13,9 @@ router.post('/',[
     body('Password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long').matches(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/)
         .withMessage('Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character (@$!%*?&)'),
     body('Name', 'Name field cannot be blank').notEmpty(),
-    body('Address', 'Address Field cannot be blank').notEmpty()
+    body('Address', 'Address Field cannot be blank').notEmpty(),
+    body('City', 'City Field cannot be blank').notEmpty(),
+    body('State', 'State Field cannot be blank').notEmpty()
 
 
 
@@ -29,11 +31,11 @@ router.post('/',[
             const salt=await bcrypt.genSalt(10)
             const securepass=await bcrypt.hash(reqpassword,salt)
             req.body.Password=securepass;
-            const {Name, Phone, Address, Email, Password} = req.body
+            const {Name, Phone, Address, Email, Password, City, State} = req.body
 
             try{
 
-                const buyer = await Buyer.create({Name, Phone, Address, Email, Password})
+                const buyer = await Buyer.create({Name, Phone, Address, Email, Password, City, State})
                 res.status(200).json({message: "Data inserted successfully"})
 
             }catch(error){

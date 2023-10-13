@@ -57,9 +57,6 @@ const Contact = () => {
         </div>
 
         <div class="contact-form">
-          <span class="circle one"></span>
-          <span class="circle two"></span>
-
           <form action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="inputvalues-container">

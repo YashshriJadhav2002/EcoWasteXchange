@@ -22,7 +22,7 @@ router.post('/', [
 
         const error = validationResult(req)
         if (!error.isEmpty()) {
-            res.status(200).json({ error: error.array() })
+            res.status(400).json({ error: error.array() })
         }
         else 
         {

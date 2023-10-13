@@ -30,6 +30,15 @@ const BuyerSchema = new schema({
 
     Password: {
         type: String
+    },
+
+    City: {
+        type: String
+    },
+
+    State: {
+        type: String
+
     }
 
 
