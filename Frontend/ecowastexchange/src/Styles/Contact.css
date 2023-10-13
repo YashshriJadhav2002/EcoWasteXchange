@@ -32,28 +32,8 @@ textarea {
 
 .contact-form {
   
-  background-color: #1abc9c;
+  background-color: #1abc35;
   position: relative;
-}
-
-.circle {
-  border-radius: 5%;
-  background: linear-gradient(135deg, transparent 20%, #149279);
-  position: absolute;
-}
-
-.circle.one {
-  width: 130px;
-  height: 130px;
-  top: 130px;
-  right: -40px;
-}
-
-.circle.two {
-  width: 80px;
-  height: 80px;
-  top: 10px;
-  right: 30px;
 }
 
 .contact-form:before {
@@ -61,7 +41,7 @@ textarea {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #1abc9c;
+  background-color: #1abc63;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
@@ -133,7 +113,7 @@ textarea.contact-input {
   background-color: #fff;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-  color: #1abc9c;
+  color: #1abc35;
   line-height: 1;
   border-radius: 25px;
   outline: none;
@@ -167,7 +147,7 @@ textarea.contact-input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: #1abc9c;
+  background-color: #1abc35;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -199,7 +179,7 @@ textarea.contact-input {
 }
 
 .contact-info .title {
-  color: #1abc9c;
+  color: black;
 }
 
 .text {
@@ -238,7 +218,7 @@ textarea.contact-input {
   width: 35px;
   height: 35px;
   border-radius: 5px;
-  background: linear-gradient(45deg, white, white);
+  background: linear-gradient(45deg, white);
   color: #fff;
   text-align: center;
   line-height: 35px;
@@ -256,34 +236,11 @@ textarea.contact-input {
   position: absolute;
   width: 110px;
   height: 100px;
-  border: 22px solid #1abc9c;
+  border: 22px solid #1abc35;
   border-radius: 50%;
   bottom: -77px;
   right: 50px;
   opacity: 0.3;
-}
-
-.big-circle {
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  margin-top: 20vh;
-  border-radius: 50%;
-  background: linear-gradient(to bottom, #1cd4af, #159b80);
-  
-  right: 50%;
-  transform: translate(-40%, 38%);
-}
-
-.big-circle:after {
-  content: "";
-  position: absolute;
-  width: 360px;
-  height: 360px;
-  background-color: #fafafa;
-  border-radius: 50%;
-  top: calc(50% - 180px);
-  left: calc(50% - 180px);
 }
 
 .square {
@@ -316,12 +273,6 @@ textarea.contact-input {
   .square {
     transform: translate(140%, 43%);
     height: 350px;
-  }
-
-  .big-circle {
-    bottom: 75%;
-    transform: scale(0.9) translate(-40%, 30%);
-    right: 50%;
   }
 
   .text {

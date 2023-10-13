@@ -23,7 +23,7 @@ app.use((req, res, next) => {
 
 })
 
-//route for seller
+//route 
 app.use('/api/seller/register', sellerRegister)
 app.use('/api/buyer/register', buyerRegister)
 app.use('/api/company/register', companyRegister)

@@ -21,17 +21,18 @@ const  CompanySchema = new schema({
 
     },
 
-    contact: {
+    Phone: {
         type: String,
         required: true
 
     },
 
-    profe: {
+    Password: {
         type: String,
-        required: true
-
+        
     }
+
+    
 
 })
 

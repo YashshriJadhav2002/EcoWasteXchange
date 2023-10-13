@@ -2,8 +2,8 @@
 .vision-container{
     display: flex;
     flex-direction: column;
-    margin-left: 110vh;
-    width:550px;
+    margin-left: 90vh;
+    width:650px;
     height: 400px;
     margin-top: -70vh;
     background: #fff;
@@ -12,6 +12,12 @@
     padding-left: 30px;
     border-radius:60px;
     font-family: 'Abril Fatface', cursive;
+    text-align: justify;
+    }
+
+    .vision-container p{
+      letter-spacing: 2.0;
+      line-height: 2.0;
     }
   
     .visionimage{

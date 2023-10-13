@@ -10,6 +10,15 @@ router.post('/',[
     body('Password','Password field cannot be empty').notEmpty()
 
 ],async(req,res)=>{
+
+
+    const error = validationResult(req)
+    if(!error.isEmpty()) {
+
+        res.status(400).json({error: error.array() })
+
+
+    }
     const seller=await Seller.findOne({Email:req.body.Email})
     if(!seller)
     {
