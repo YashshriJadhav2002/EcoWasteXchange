@@ -1,13 +1,15 @@
 import React from 'react';
 import '../../Styles/Login.css'
-
+import { useLocation } from 'react-router-dom';
 
 const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     // Here, you can add the logic to handle the login process, such as sending the email and password to the server
   };
-
+  const location = useLocation(); 
+  const page = location.pathname.split('/').pop();
+  const pageName = page + 'register';
   return (
     <div className='login-container'>
       <div className="header">
@@ -28,7 +30,7 @@ const Login = () => {
         <div className="login-submit-container">
           <button type="login-submit" className="login-submit">Login</button>
           
-          <button type="signup" className="login-submit" onClick={event => window.location.href='/signup'} >Sign Up</button>
+          <button type="signup" className="login-submit" onClick={event => window.location.href={pageName }} >Sign Up</button>
         </div>
       </form>
     </div>
