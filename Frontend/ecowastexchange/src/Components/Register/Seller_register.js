@@ -1,15 +1,31 @@
 import React, { useState } from 'react';
 import '../../../src/Styles/Register.css'
 const SellerRegister = () => {
+  let name,email,phone,address,city,state,password
+
   const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    address: '',
-    email: '',
-    city: '',
-    state: '',
-    image: null,
+    Name: '',
+    Phone: '',
+    Address: '',
+    Email: '',
+    City: '',
+    State: '',
+    Password:'',
+    Image: null,
   });
+
+  const [errors,setErrors]=useState({
+    Name: '',
+    Phone: '',
+    Address: '',
+    Email: '',
+    City: '',
+    State: '',
+    Password:'',
+    Image: null,
+
+  })
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -27,11 +43,74 @@ const SellerRegister = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here, you can access the selected image as formData.image and perform actions like uploading it to the server
-    console.log(formData);
-  };
+  const postData= async(e)=>{
+    e.preventDefault()
+
+    const {Name,Email,Phone,Address,City,State,Password}=formData;
+
+    const res = await fetch("/api/seller/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify
+    ({
+        Name,Email,Phone,Address,City,State,Password
+    })
+  
+  })
+
+  const data = await res.json()
+  if(res.status===200)
+  {
+    
+    window.alert("valid Registeration")
+    setErrors({Name: '',
+    Phone: '',
+    Address: '',
+    Email: '',
+    City: '',
+    State: '',
+    Password:'',
+    Image: null,
+})
+    
+  }
+  else
+  {
+    for(let i =0;i<data.error.length;i++)
+    {
+      if(data.error[i].path==="Name")
+        name="** "+data.error[i].msg
+      
+      else if(data.error[i].path==="Email")
+        email ="** "+data.error[i].msg
+
+      else if(data.error[i].path==="Password")
+       password="** "+data.error[i].msg
+      
+      else if(data.error[i].path==="Address")
+        address="** "+data.error[i].msg
+      
+      else if(data.error[i].path==="City")
+       city="** "+data.error[i].msg
+      
+      else if(data.error[i].path==="State")
+        state="** "+data.error[i].msg
+      
+      else if(data.error[i].path==="Phone")
+        phone="** "+data.error[i].msg
+      
+    }
+      setErrors({
+        Name:name,
+        Email:email,
+        Address:address,
+        City:city,
+        State:state,
+        Phone:phone,
+        Password:password
+      })
+
+      
+  }
+
+  }
 
   return (
     <div className='register-container'>
@@ -39,62 +118,86 @@ const SellerRegister = () => {
         <div className="register-text">Register</div>
         <div className="register-underline"></div>
       </div>
-      <form onSubmit={handleSubmit}>
+      <form method='Post'>
         <div className="register-inputs">
           <div className="register-input">
             <input
               type="text"
-              name="name"
+              name="Name"
               placeholder="Name"
-              value={formData.name}
+              required
+              value={formData.Name}
               onChange={handleInputChange}
             />
+           
           </div>
+          <span className='spanmsg'>{errors.Name}</span>
           <div className="register-input">
             <input
-              type="text"
-              name="phone"
+              type="number"
+              name="Phone"
               placeholder="Phone"
-              value={formData.phone}
+              required
+              value={formData.Phone}
               onChange={handleInputChange}
             />
           </div>
+          <span className='spanmsg'>{errors.Phone}</span>
           <div className="register-input">
             <input
               type="text"
-              name="address"
+              name="Address"
               placeholder="Address"
-              value={formData.address}
+              value={formData.Address}
+              required
               onChange={handleInputChange}
             />
           </div>
+          <span className='spanmsg'>{errors.Address}</span>
           <div className="register-input">
             <input
               type="email"
-              name="email"
+              name="Email"
               placeholder="Email"
-              value={formData.email}
+              required
+              value={formData.Email}
               onChange={handleInputChange}
             />
           </div>
+          <span className='spanmsg'>{errors.Email}</span>
           <div className="register-input">
             <input
-              type="city"
-              name="city"
+              type="text"
+              name="City"
               placeholder="City"
-              value={formData.city}
+              required
+              value={formData.City}
               onChange={handleInputChange}
             />
           </div>
+          <span className='spanmsg'>{errors.City}</span>
           <div className="register-input">
             <input
-              type="state"
-              name="state"
+              type="text"
+              required
+              name="State"
               placeholder="State"
-              value={formData.state}
+              value={formData.State}
               onChange={handleInputChange}
             />
           </div>
+          <span className='spanmsg'>{errors.State}</span>
+          <div className="register-input">
+            <input
+              type="password"
+              name="Password"
+              required
+              placeholder="Password"
+              value={formData.Password}
+              onChange={handleInputChange}
+            />
+          </div>
+          <span className='spanmsg'>{errors.Password}</span>
         </div>
         <div>
           <div className="register-upload-image">
@@ -104,11 +207,11 @@ const SellerRegister = () => {
               type="file"
               accept="image/*"
               onChange={handleImageChange}
-            />
+            /><br></br>
           </div>
         </div>
         <div className="register-submit-container">
-          <button type="register-submit" className="register-submit">Sign Up</button>
+          <button type="register-submit" className="register-submit" onClick={postData}>Sign Up</button>
           <button className="register-submit" onClick={event => window.location.href='/login'}>Login</button>
         </div>
       </form>
