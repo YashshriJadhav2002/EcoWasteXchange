@@ -5,32 +5,33 @@ const schema = mongoose.Schema
 const BuyerSchema = new schema({
 
     Name: {
-        type: String,
-        required: true
+        type: String
+      
     },
 
     Phone: {
         type: Number,
-        required: true
-
+        unique:true
+        
     },
 
     Address: {
-        type: String,
-        required: true
+        type: String
+        
 
     },
 
     Email: {
         type: String,
-        required: true
+        unique:true
+       
 
     },
 
-    Profe: {
-        type: String,
-        required: true
+    Password: {
+        type: String
     }
+
 
 })
 
