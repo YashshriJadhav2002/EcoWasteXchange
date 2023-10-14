@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../../Styles/Login.css'
-
+import { useLocation } from 'react-router-dom';
 
 const Login = () => {
 
@@ -121,7 +121,7 @@ const Login = () => {
 
           >Login</button>
           
-          <button type="signup" className="login-submit" onClick={event => window.location.href='/signup'} >Sign Up</button>
+          <button type="signup" className="login-submit" onClick={event => window.location.href={pageName }} >Sign Up</button>
         </div>
         
       </form>

@@ -65,7 +65,7 @@ const Contact = () => {
               <span>Username</span>
             </div>
             <div class="inputvalues-container">
-              <input type="email" name="email" class="contact-input" />
+              <input type="email" placeholder="email" class="contact-input" />
               <label for="">Email</label>
               <span>Email</span>
             </div>
