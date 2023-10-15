@@ -59,7 +59,7 @@ const SellerRegister = () => {
   if(res.status===200)
   {
     
-    window.alert("valid Registeration")
+    window.alert("Registeration Successful")
     setErrors({Name: '',
     Phone: '',
     Address: '',
@@ -69,6 +69,7 @@ const SellerRegister = () => {
     Password:'',
     Image: null,
 })
+    window.location.href='/Seller'
     
   }
   else
@@ -212,7 +213,6 @@ const SellerRegister = () => {
         </div>
         <div className="register-submit-container">
           <button type="register-submit" className="register-submit" onClick={postData}>Sign Up</button>
-          <button className="register-submit" onClick={event => window.location.href='/login'}>Login</button>
         </div>
       </form>
     </div>

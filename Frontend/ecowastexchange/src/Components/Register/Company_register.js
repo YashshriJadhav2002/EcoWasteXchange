@@ -61,7 +61,7 @@ const CompanyRegister = () => {
   if(res.status===200)
   {
     
-    window.alert("valid Registeration")
+    window.alert("Registeration Successful")
     setErrors({Name: '',
     Phone: '',
     Address: '',
@@ -71,6 +71,7 @@ const CompanyRegister = () => {
     Password:'',
     Image: null,
 })
+window.location.href='/Company'
     
   }
   else
@@ -125,7 +126,7 @@ const CompanyRegister = () => {
           <div className="register-input">
             <input
               type="text"
-              name="name"
+              name="Name"
               placeholder="Name"
               value={formData.Name}
               onChange={handleInputChange}
@@ -135,7 +136,7 @@ const CompanyRegister = () => {
           <div className="register-input">
             <input
               type="text"
-              name="phone"
+              name="Phone"
               placeholder="Phone"   
               value={formData.Phone}
               onChange={handleInputChange}
@@ -145,7 +146,7 @@ const CompanyRegister = () => {
           <div className="register-input">
             <input
               type="text"
-              name="address"
+              name="Address"
               placeholder="Address"
               value={formData.Address}
               onChange={handleInputChange}
@@ -155,7 +156,7 @@ const CompanyRegister = () => {
           <div className="register-input">
             <input
               type="email"
-              name="email"
+              name="Email"
               placeholder="Email"
               value={formData.Email}
               onChange={handleInputChange}
@@ -165,7 +166,7 @@ const CompanyRegister = () => {
           <div className="register-input">
             <input
               type="city"
-              name="city"
+              name="City"
               placeholder="City"
               value={formData.City}
               onChange={handleInputChange}
@@ -175,7 +176,7 @@ const CompanyRegister = () => {
           <div className="register-input">
             <input
               type="state"
-              name="state"
+              name="State"
               placeholder="State"
               value={formData.State}
               onChange={handleInputChange}
@@ -217,7 +218,6 @@ const CompanyRegister = () => {
         </div>
         <div className="register-submit-container">
           <button type="register-submit" className="register-submit" onClick={postData}>Sign Up</button>
-          <div className="register-submit" onClick={event => window.location.href='/login'}>Login</div>
         </div>
       </form>
     </div>

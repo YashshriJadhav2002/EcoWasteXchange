@@ -51,7 +51,7 @@ const VendorRegister = () => {
 
     const {Name,Email,Phone,Address,City,State,Password}=formData;
 
-    const res = await fetch("/api/company/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify
+    const res = await fetch("/api/buyer/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify
     ({
         Name,Email,Phone,Address,City,State,Password
     })
@@ -62,7 +62,7 @@ const VendorRegister = () => {
   if(res.status===200)
   {
     
-    window.alert("valid Registeration")
+    window.alert("Registeration Successful")
     setErrors({Name: '',
     Phone: '',
     Address: '',
@@ -71,9 +71,10 @@ const VendorRegister = () => {
     State: '',
     Password:'',
     Image: null,
-})
     
-  }
+})
+window.location.href='/Vendor'
+    }
   else
   {
     for(let i =0;i<data.error.length;i++)
@@ -126,8 +127,9 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="text"
-              name="name"
+              name="Name"
               placeholder="Name"
+              required
               value={formData.Name}
               onChange={handleInputChange}
             />
@@ -136,8 +138,9 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="text"
-              name="phone"
+              name="Phone"
               placeholder="Phone"
+              required
               value={formData.Phone}
               onChange={handleInputChange}
             />
@@ -146,8 +149,9 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="text"
-              name="address"
+              name="Address"
               placeholder="Address"
+              required
               value={formData.Address}
               onChange={handleInputChange}
             />
@@ -156,7 +160,8 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="email"
-              name="email"
+              name="Email"
+              required
               placeholder="Email"
               value={formData.Email}
               onChange={handleInputChange}
@@ -166,7 +171,8 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="city"
-              name="city"
+              name="City"
+              required
               placeholder="City"
               value={formData.City}
               onChange={handleInputChange}
@@ -176,7 +182,8 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="state"
-              name="state"
+              name="State"
+              required
               placeholder="State"
               value={formData.State}
               onChange={handleInputChange}
@@ -218,7 +225,6 @@ const VendorRegister = () => {
         </div>
         <div className="register-submit-container">
           <button type="register-submit" className="register-submit" onClick={postData}>Sign Up</button>
-          <div className="register-submit" onClick={event => window.location.href='/login'}>Login</div>
         </div>
       </form>
     </div>
