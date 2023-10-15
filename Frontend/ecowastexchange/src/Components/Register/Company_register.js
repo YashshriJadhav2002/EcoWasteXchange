@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../../src/Styles/Register.css'
 const CompanyRegister = () => {
-  let name,email,phone,address,city,state,password
+  let name,email,phone,address,city,state,password,database
 
   const [formData, setFormData] = useState({
     Name: '',
@@ -25,6 +25,7 @@ const CompanyRegister = () => {
     Password:'',
     Image: null,
     Document:null,
+    Database:"",
 
   })
 
@@ -61,7 +62,7 @@ const CompanyRegister = () => {
   if(res.status===200)
   {
     
-    window.alert("Registeration Successful")
+    window.alert(data.message)
     setErrors({Name: '',
     Phone: '',
     Address: '',
@@ -70,6 +71,7 @@ const CompanyRegister = () => {
     State: '',
     Password:'',
     Image: null,
+    Database:"",
 })
 window.location.href='/Company'
     
@@ -98,6 +100,8 @@ window.location.href='/Company'
       
       else if(data.error[i].path==="Phone")
         phone="** "+data.error[i].msg
+      else if(data.error[i].path==="Database")
+        database="** "+data.error[i].msg
       
     }
       setErrors({
@@ -107,7 +111,8 @@ window.location.href='/Company'
         City:city,
         State:state,
         Phone:phone,
-        Password:password
+        Password:password,
+        Database:database,
       })
 
       
@@ -123,6 +128,7 @@ window.location.href='/Company'
       </div>
       <form method='post'>
         <div className="register-inputs">
+        <span className='spanmsg'>{errors.Database}</span>
           <div className="register-input">
             <input
               type="text"

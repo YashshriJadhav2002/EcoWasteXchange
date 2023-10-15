@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../../src/Styles/Register.css'
 const SellerRegister = () => {
-  let name,email,phone,address,city,state,password
+  let name,email,phone,address,city,state,password,database
 
   const [formData, setFormData] = useState({
     Name: '',
@@ -23,6 +23,7 @@ const SellerRegister = () => {
     State: '',
     Password:'',
     Image: null,
+    database:"",
 
   })
 
@@ -59,7 +60,7 @@ const SellerRegister = () => {
   if(res.status===200)
   {
     
-    window.alert("Registeration Successful")
+    window.alert(data.message)
     setErrors({Name: '',
     Phone: '',
     Address: '',
@@ -68,12 +69,14 @@ const SellerRegister = () => {
     State: '',
     Password:'',
     Image: null,
+    database:"",
 })
     window.location.href='/Seller'
     
   }
   else
   {
+    console.log(data.error)
     for(let i =0;i<data.error.length;i++)
     {
       if(data.error[i].path==="Name")
@@ -96,6 +99,8 @@ const SellerRegister = () => {
       
       else if(data.error[i].path==="Phone")
         phone="** "+data.error[i].msg
+      else if(data.error[i].path=="Database")
+        database="** "+data.error[i].msg
       
     }
       setErrors({
@@ -105,7 +110,8 @@ const SellerRegister = () => {
         City:city,
         State:state,
         Phone:phone,
-        Password:password
+        Password:password,
+        database:database,
       })
 
       
@@ -121,6 +127,7 @@ const SellerRegister = () => {
       </div>
       <form method='Post'>
         <div className="register-inputs">
+        <span className='spanmsg'>{errors.database}</span>
           <div className="register-input">
             <input
               type="text"

@@ -29,6 +29,10 @@ function App() {
       <Route path="/seller" element={<Login />} />
       <Route path="/vendor" element={<Login />} />
       <Route path="/company" element={<Login />} />
+      <Route path='/sellerDashboard' element={<sellerDashboard/>}/>
+      <Route path='/vendorDashboard' element={<vendorDashboard/>}/>
+      <Route path='/companyDashboard' element={<companyDashboard/>}/>
+
     </Routes>
     
     </div>
