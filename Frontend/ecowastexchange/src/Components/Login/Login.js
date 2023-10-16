@@ -59,14 +59,14 @@ const Login = () => {
      
       window.alert(data.message)
       if (page === "Seller") {
-        window.location.href = '/sellerDashboard'
+        window.location.href = '/SellerHome'
       }
 
       else if (page === "Vendor") {
-        window.location.href = '/vendorDashboard'
+        window.location.href = '/'
       }
       else {
-        window.location.href = '/companyDashboard'
+        window.location.href = '/'
       }
 
     }

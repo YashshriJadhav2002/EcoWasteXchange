@@ -9,6 +9,7 @@ import About_us from './Components/landing_page/About_us';
 import Contact from './Components/landing_page/Contact';
 import VendorRegister from './Components/Register/Vendor_register';
 import CompanyRegister from './Components/Register/Company_register';
+import Seller_Home from './Components/Dashboard/Seller-Dashboard/Seller_Home';
 
 
 
@@ -16,7 +17,7 @@ function App() {
   return (
 
     <div className="App">
-       <Navbar />
+      <Navbar></Navbar>
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
@@ -29,10 +30,7 @@ function App() {
       <Route path="/seller" element={<Login />} />
       <Route path="/vendor" element={<Login />} />
       <Route path="/company" element={<Login />} />
-      <Route path='/sellerDashboard' element={<sellerDashboard/>}/>
-      <Route path='/vendorDashboard' element={<vendorDashboard/>}/>
-      <Route path='/companyDashboard' element={<companyDashboard/>}/>
-
+      <Route path="/SellerHome" element={<Seller_Home/>}/>
     </Routes>
     
     </div>
