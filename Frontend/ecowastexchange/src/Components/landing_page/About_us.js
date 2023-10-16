@@ -1,10 +1,12 @@
 import React from 'react';
 import '../../../src/Styles/AboutUs.css'
 import AboutUs from '../../../src/Images/about_us.png';
+import Navbar from './Navbar';
 
 
     const InfoContainer = () => 
     {
+      <Navbar />
   return (
     
     <div >

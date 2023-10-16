@@ -7,9 +7,10 @@ import twitter from '../../../src/Images/twitter.png';
 import facebook from '../../../src/Images/facebook.png';
 import linkedin from '../../../src/Images/linkedin.png';
 import '../../../src/Styles/Contact.css';
-
+import Navbar from './Navbar';
 
 const Contact = () => {
+  <Navbar />
   return (
 <body>
     <div >

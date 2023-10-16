@@ -1,10 +1,12 @@
 import React from 'react'
 import '../../../src/Styles/Home.css'
 import BannerImage from '../../../src/Images/home-banner-image.png';
-
+import Navbar from './Navbar';
 
 const Home = () => {
+  <Navbar />
     return (
+      
       <div className='mainpage' >
         <div className="home-banner-container">
           <div className="home-text-section">

@@ -1,10 +1,11 @@
 import React from 'react';
 import '../../../src/Styles/Vision.css'
 import vision from '../../../src/Images/Vision.png';
+import Navbar from './Navbar';
 
 
     const InfoContainer = () => 
-    {
+    { <Navbar />
    return (
     
     <div >
