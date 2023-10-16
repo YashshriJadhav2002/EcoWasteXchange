@@ -5,6 +5,7 @@ const { validationResult, body } = require('express-validator')
 const router = express.Router()
 const bcrypt=require('bcrypt')
 
+let message;
 
 //POST
 router.post('/', [
@@ -33,13 +34,23 @@ router.post('/', [
             const { Name, Phone, Address, Email,Password,City,State } = req.body
 
             try {
-
+                const existingUser=await Seller.findOne({Email:req.body.Email})
+                if(existingUser)
+                message="Email already Registered"
+                else 
+                {
+                    const existingUser1=await Seller.findOne({Phone:req.body.Phone})
+                    if(existingUser1)
+                    message="Phone no already Registered"
+                }
+                
+                
                 const seller = await Seller.create({ Name, Phone, Address, Email ,Password,City,State})
                 res.status(200).json({message:"Data Inserted Successfully"})
 
             } catch (error) {
 
-                res.status(400).json({ error: error.message })
+                res.status(400).json({ error:[{path:"Database",msg:message} ]})
 
             }
         }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../../src/Styles/Register.css'
 
 const VendorRegister = () => {
-  let name,email,phone,address,city,state,password
+  let name,email,phone,address,city,state,password,database
 
   const [formData, setFormData] = useState({
     Name: '',
@@ -26,6 +26,7 @@ const VendorRegister = () => {
     Password:'',
     Image: null,
     Document:null,
+    Database:"",
 
   })
 
@@ -51,7 +52,7 @@ const VendorRegister = () => {
 
     const {Name,Email,Phone,Address,City,State,Password}=formData;
 
-    const res = await fetch("/api/company/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify
+    const res = await fetch("/api/buyer/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify
     ({
         Name,Email,Phone,Address,City,State,Password
     })
@@ -62,7 +63,7 @@ const VendorRegister = () => {
   if(res.status===200)
   {
     
-    window.alert("valid Registeration")
+    window.alert(data.message)
     setErrors({Name: '',
     Phone: '',
     Address: '',
@@ -71,9 +72,11 @@ const VendorRegister = () => {
     State: '',
     Password:'',
     Image: null,
-})
+    Database:"",
     
-  }
+})
+window.location.href='/Vendor'
+    }
   else
   {
     for(let i =0;i<data.error.length;i++)
@@ -98,6 +101,8 @@ const VendorRegister = () => {
       
       else if(data.error[i].path==="Phone")
         phone="** "+data.error[i].msg
+      else if(data.error[i].path==="Database")
+        database="** "+data.error[i].msg
       
     }
       setErrors({
@@ -107,7 +112,8 @@ const VendorRegister = () => {
         City:city,
         State:state,
         Phone:phone,
-        Password:password
+        Password:password,
+        Database:database,
       })
 
       
@@ -123,11 +129,13 @@ const VendorRegister = () => {
       </div>
       <form method='post'>
         <div className="register-inputs">
+        <span className='spanmsg'>{errors.Database}</span>
           <div className="register-input">
             <input
               type="text"
-              name="name"
+              name="Name"
               placeholder="Name"
+              required
               value={formData.Name}
               onChange={handleInputChange}
             />
@@ -136,8 +144,9 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="text"
-              name="phone"
+              name="Phone"
               placeholder="Phone"
+              required
               value={formData.Phone}
               onChange={handleInputChange}
             />
@@ -146,8 +155,9 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="text"
-              name="address"
+              name="Address"
               placeholder="Address"
+              required
               value={formData.Address}
               onChange={handleInputChange}
             />
@@ -156,7 +166,8 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="email"
-              name="email"
+              name="Email"
+              required
               placeholder="Email"
               value={formData.Email}
               onChange={handleInputChange}
@@ -166,7 +177,8 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="city"
-              name="city"
+              name="City"
+              required
               placeholder="City"
               value={formData.City}
               onChange={handleInputChange}
@@ -176,7 +188,8 @@ const VendorRegister = () => {
           <div className="register-input">
             <input
               type="state"
-              name="state"
+              name="State"
+              required
               placeholder="State"
               value={formData.State}
               onChange={handleInputChange}
@@ -218,7 +231,6 @@ const VendorRegister = () => {
         </div>
         <div className="register-submit-container">
           <button type="register-submit" className="register-submit" onClick={postData}>Sign Up</button>
-          <div className="register-submit" onClick={event => window.location.href='/login'}>Login</div>
         </div>
       </form>
     </div>

@@ -21,19 +21,15 @@ router.post('/',[
     }
     const seller=await Seller.findOne({Email:req.body.Email})
     if(!seller)
-    {
-        console.log("not success")
-        return res.status(400).json({error:"Seller not registered"})
-        
-    }
-   
+        return res.status(400).json({error:[{path:"Email",msg:"Seller not registered"}]})
+
     else{
         const password=req.body.Password
         bcrypt.compare(password,seller.Password,function(err,response){
         if(response)
         return res.status(200).json({message:"Login Successfull"})
         else
-        return res.status(400).json({message:"Incorrect Password"})
+        return res.status(400).json({error:[{path:"Password",msg:"Incorrect Password"}]})
                 
         })
     }
