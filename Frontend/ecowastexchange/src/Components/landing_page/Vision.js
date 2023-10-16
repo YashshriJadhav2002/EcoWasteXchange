@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 
 
     const InfoContainer = () => 
-    { <Navbar />
+    { 
    return (
     
     <div >

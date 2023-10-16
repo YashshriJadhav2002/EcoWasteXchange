@@ -10,7 +10,6 @@ import '../../../src/Styles/Contact.css';
 import Navbar from './Navbar';
 
 const Contact = () => {
-  <Navbar />
   return (
 <body>
     <div >

@@ -18,17 +18,17 @@ const Seller_Sidebar = ({children}) => {
     const toggle = () => setIsOpen (!isOpen);
     const menuItem=[
         {
-            path:"/",
+            path:"/SellerHome",
             name:"Home",
             icon:<FaTh/>
         },
         {
-            path:"/Cart",
+            path:"/SellerCart",
             name:"Cart",
             icon:<FaUserAlt/>
         },
         {
-            path:"/History",
+            path:"/SellerHistory",
             name:"History",
             icon:<FaRegChartBar/>
         }

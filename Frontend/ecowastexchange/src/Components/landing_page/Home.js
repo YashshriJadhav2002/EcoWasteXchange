@@ -4,7 +4,6 @@ import BannerImage from '../../../src/Images/home-banner-image.png';
 import Navbar from './Navbar';
 
 const Home = () => {
-  <Navbar />
     return (
       
       <div className='mainpage' >

@@ -1,0 +1,79 @@
+
+
+.heading {
+    display: flex;
+    align-items: center;  
+    background-color: #2e8f3e;
+    justify-content: space-between;
+    min-height: 10vh;
+  }
+  .navbar-menu-container3 {
+    display: none;
+    
+  }
+  
+  .navbar-links-container3 a {
+    margin-right: 3rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+  }
+  .navbar-links-container3 a:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar-cart-icon {
+    font-size: 1.15rem;
+  }
+  
+  
+  .dropdown-menu3 {
+    position: absolute;
+    top: 70px; /* Adjust the top position as needed */
+    right: 0;
+    background-color: #fff; /* Add your desired background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+    border: 1px solid #ccc; /* Add a border for a cleaner look */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 120px; /* Adjust the minimum width as needed */
+    z-index: 1;
+  }
+  
+  .dropdown-menu3 a {
+    color: #333; /* Add your desired text color */
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-menu3 a:hover {
+    background-color: #f0f0f0; /* Add your desired hover
+  /* Home.css */}
+  
+  .dropdown-menu-sellergadget {
+    position: absolute;
+    top: 70px; /* Adjust the top position as needed */
+    right: 10;
+    background-color: #fff; /* Add your desired background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+    border: 1px solid #ccc; /* Add a border for a cleaner look */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-width: 120px; /* Adjust the minimum width as needed */
+  }
+  
+  .dropdown-menu-sellergadget a {
+    color: #333; /* Add your desired text color */
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s;
+  }
+  
+  .dropdown-menu-sellergadget a:hover {
+    background-color: #f0f0f0; /* Add your desired hover
+  /* Home.css */}
