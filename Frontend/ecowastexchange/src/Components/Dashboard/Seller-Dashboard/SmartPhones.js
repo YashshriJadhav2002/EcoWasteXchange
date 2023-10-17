@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React, { useState, useRef } from "react";
@@ -170,3 +171,23 @@ function SmartPhones() {
 }
 
 export default SmartPhones;
+=======
+import react from 'react'
+
+const SmartPhones = () => {
+
+
+
+
+    return (
+
+        <div>Hiiiiiii</div>
+
+
+    )
+
+}
+
+
+export default SmartPhones;
+>>>>>>> b705e18f7a82d964da9699ab6ec6a7c8fe4218be

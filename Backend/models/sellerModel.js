@@ -37,6 +37,9 @@ const SellerSchema = new schema({
     Password:{
         type:String,
         
+    },
+    Avatar:{
+        type:String,
     }
 
 })
