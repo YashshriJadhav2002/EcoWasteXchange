@@ -1,13 +1,16 @@
 import React from 'react';
 import '../../../src/Styles/AboutUs.css'
 import AboutUs from '../../../src/Images/about_us.png';
+import Navbar from './Navbar';
 
 
     const InfoContainer = () => 
     {
+    
   return (
     
     <div >
+       <Navbar></Navbar>
       <h1 className='aboutus-heading' style={{color: "black"}}>About Us</h1><br></br>
       <div className="aboutus-underline"></div>
          <img src={AboutUs} className='aboutusimage' alt="" />

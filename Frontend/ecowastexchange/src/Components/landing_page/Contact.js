@@ -7,12 +7,12 @@ import twitter from '../../../src/Images/twitter.png';
 import facebook from '../../../src/Images/facebook.png';
 import linkedin from '../../../src/Images/linkedin.png';
 import '../../../src/Styles/Contact.css';
-
+import Navbar from './Navbar';
 
 const Contact = () => {
   return (
-<body>
     <div >
+    <Navbar></Navbar>
       <span ></span>
       <img src="img/shape.png" class="square" alt="" />
       <div class="form">
@@ -84,7 +84,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-  </body>
+  
   )}
 
 export default Contact; 

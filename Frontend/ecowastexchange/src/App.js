@@ -9,14 +9,17 @@ import About_us from './Components/landing_page/About_us';
 import Contact from './Components/landing_page/Contact';
 import VendorRegister from './Components/Register/Vendor_register';
 import CompanyRegister from './Components/Register/Company_register';
-
+import Seller_Home from './Components/Dashboard/Seller-Dashboard/Seller_Home';
+import Seller_Cart from './Components/Dashboard/Seller-Dashboard/Seller_Cart';
+import Seller_History from './Components/Dashboard/Seller-Dashboard/Seller_History';
+import SmartPhones from './Components/Dashboard/Seller-Dashboard/SmartPhones';
 
 
 function App() {
   return (
 
     <div className="App">
-       <Navbar />
+      
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
@@ -29,9 +32,10 @@ function App() {
       <Route path="/seller" element={<Login />} />
       <Route path="/vendor" element={<Login />} />
       <Route path="/company" element={<Login />} />
-      <Route path='/sellerDashboard' element={<sellerDashboard/>}/>
-      <Route path='/vendorDashboard' element={<vendorDashboard/>}/>
-      <Route path='/companyDashboard' element={<companyDashboard/>}/>
+      <Route path="/SellerHome" element={<Seller_Home/>}/>
+      <Route path="/SellerCart" element={<Seller_Cart/>}/>     
+      <Route path="/SellerHistory" element={<Seller_History/>}/>
+      <Route path='/Smart Phones' element={<SmartPhones/>}/>
 
     </Routes>
     

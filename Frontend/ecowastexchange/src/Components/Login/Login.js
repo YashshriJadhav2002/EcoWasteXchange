@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../Styles/Login.css'
 import { useLocation } from 'react-router-dom';
-
+import Navbar from '../landing_page/Navbar';
 
 const Login = () => {
 
@@ -59,14 +59,14 @@ const Login = () => {
      
       window.alert(data.message)
       if (page === "Seller") {
-        window.location.href = '/sellerDashboard'
+        window.location.href = '/SellerHome'
       }
 
       else if (page === "Vendor") {
-        window.location.href = '/vendorDashboard'
+        window.location.href = '/'
       }
       else {
-        window.location.href = '/companyDashboard'
+        window.location.href = '/'
       }
 
     }
@@ -94,8 +94,11 @@ const Login = () => {
 
   }
 
-
+ 
   return (
+    <div>
+      <Navbar></Navbar>
+    
     <div className='login-container'>
       <div className="header">
         <div className="login-text">Login</div>
@@ -159,6 +162,7 @@ const Login = () => {
             }} >Sign Up</button>
           </div>
         </form>
+    </div>
     </div>
   );
 };

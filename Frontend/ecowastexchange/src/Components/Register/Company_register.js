@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import '../../../src/Styles/Register.css'
+import '../../../src/Styles/Register.css';
+import Navbar from '../landing_page/Navbar';
 const CompanyRegister = () => {
   let name,email,phone,address,city,state,password,database
 
@@ -121,6 +122,8 @@ window.location.href='/Company'
   }
 
   return (
+    <div>
+      <Navbar></Navbar>
     <div className='register-container'>
       <div className="header">
         <div className="register-text">Register</div>
@@ -226,6 +229,7 @@ window.location.href='/Company'
           <button type="register-submit" className="register-submit" onClick={postData}>Sign Up</button>
         </div>
       </form>
+    </div>
     </div>
   );
 };
