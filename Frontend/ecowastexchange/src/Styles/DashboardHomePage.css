@@ -31,15 +31,15 @@
   .navbar-cart-icon {
     font-size: 1.15rem;
   }
+
+  
   
   
   .dropdown-menu3 {
     position: absolute;
-    top: 70px; /* Adjust the top position as needed */
-    right: 0;
+    top: 11vh; /* Adjust the top position as needed */
+    right: 5vh;
     background-color: #fff; /* Add your desired background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
-    border: 1px solid #ccc; /* Add a border for a cleaner look */
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -60,11 +60,10 @@
   
   .dropdown-menu-sellergadget {
     position: absolute;
-    top: 70px; /* Adjust the top position as needed */
-    right: 10;
+    top: 11vh; /* Adjust the top position as needed */
+    right: 33vh;
     background-color: #fff; /* Add your desired background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
-    border: 1px solid #ccc; /* Add a border for a cleaner look */
+    
     padding: 10px;
     display: flex;
     flex-direction: column;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import '../../../Styles/SellerDashboard.css'
 
@@ -6,11 +6,12 @@ import '../../../Styles/SellerDashboard.css'
 import {
     FaTh,
     FaBars,
-    FaUserAlt,
+    FaShoppingCart,
     FaRegChartBar
     
 }from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
+
 
 
 const Seller_Sidebar = ({children}) => {
@@ -25,7 +26,7 @@ const Seller_Sidebar = ({children}) => {
         {
             path:"/SellerCart",
             name:"Cart",
-            icon:<FaUserAlt/>
+            icon:<FaShoppingCart/>
         },
         {
             path:"/SellerHistory",
@@ -51,7 +52,7 @@ const Seller_Sidebar = ({children}) => {
                    ))
                }
            </div>
-           <main className='home-container'>{children}</main>
+           <main className='home-container' onClick={toggle}>{children}</main>
         </div>
     );
 };
