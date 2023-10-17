@@ -3,7 +3,7 @@ import '../../../Styles/SellerGadget.css';
 import Seller_Navbar from "./Seller_Navbar";
 
 
-function SmartPhones() {
+function Laptop() {
     const [formData, setFormData] = useState({
         question1 : 'What is Buying cost of product?',
         question2 : 'Enter Age of the product',
@@ -169,5 +169,5 @@ function SmartPhones() {
   );
 }
 
-export default SmartPhones;
+export default Laptop;
 

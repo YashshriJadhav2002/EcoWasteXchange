@@ -11,8 +11,8 @@ const Seller_Navbar = () => {
   const [SellerOpen, setSellerOptions] = useState(false);
 
   const SellerOptions = [
-    "Smart Phones",
-    "Ear buds",
+    "Smartphones",
+    "Earbud",
     "Laptop",
   ];
 

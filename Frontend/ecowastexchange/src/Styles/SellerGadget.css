@@ -1,10 +1,9 @@
 .image-upload-container {
-    padding: 2vh;
+    padding: 8vh;
     display: flex;
-    width: 80vw;
+    width: 40vw;
     margin-left: 50px;
-    justify-content: center;
-    height: 100vh;
+    height: 80vh;
     
 }
 
@@ -25,12 +24,11 @@
     font-weight: bold;
     margin-bottom: 1rem;
     cursor: pointer;
-    margin-left: 0px;
+    align-items: center;
 }
 
 .image-upload-input {
     display: none;
-    margin-left: 20vh;
 }
 
 .image-upload-button {
@@ -58,12 +56,12 @@
     flex-direction: column;
     margin:auto;
     width:50vw;
-    margin-top: 5vh;
-    padding-top: 0px;
-    padding-left: 0px;
+    margin-top: -76vh;
+    padding-top: 0;
+    padding-left: 50vh;
     font-family: 'Abril Fatface', cursive;
     margin-bottom: 10px;
-    height:85vh;    }
+    height:95vh;    }
 .body
 {
   overflow-y: scroll;
@@ -140,4 +138,3 @@
   
     }
     
-  
