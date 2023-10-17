@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../Styles/Login.css'
 import { useLocation } from 'react-router-dom';
-
+import Navbar from '../landing_page/Navbar';
 
 const Login = () => {
 
@@ -94,8 +94,11 @@ const Login = () => {
 
   }
 
-
+ 
   return (
+    <div>
+      <Navbar></Navbar>
+    
     <div className='login-container'>
       <div className="header">
         <div className="login-text">Login</div>
@@ -159,6 +162,7 @@ const Login = () => {
             }} >Sign Up</button>
           </div>
         </form>
+    </div>
     </div>
   );
 };

@@ -4,10 +4,10 @@ import BannerImage from '../../../src/Images/home-banner-image.png';
 import Navbar from './Navbar';
 
 const Home = () => {
-  <Navbar />
+  
     return (
-      
       <div className='mainpage' >
+        <Navbar></Navbar>
         <div className="home-banner-container">
           <div className="home-text-section">
             <h1 className="primary-heading">
@@ -22,6 +22,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

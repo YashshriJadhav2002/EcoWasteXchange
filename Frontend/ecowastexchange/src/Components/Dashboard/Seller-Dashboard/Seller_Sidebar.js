@@ -18,26 +18,26 @@ const Seller_Sidebar = ({children}) => {
     const toggle = () => setIsOpen (!isOpen);
     const menuItem=[
         {
-            path:"/",
+            path:"/SellerHome",
             name:"Home",
             icon:<FaTh/>
         },
         {
-            path:"/Cart",
+            path:"/SellerCart",
             name:"Cart",
             icon:<FaUserAlt/>
         },
         {
-            path:"/History",
+            path:"/SellerHistory",
             name:"History",
             icon:<FaRegChartBar/>
         }
     ]
     return (
-        <div className="container">
+        <div className="container-sidebar">
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
-                   <img src='Logo.png' className='logo' />
+                   
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
                    </div>

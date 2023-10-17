@@ -10,6 +10,8 @@ import Contact from './Components/landing_page/Contact';
 import VendorRegister from './Components/Register/Vendor_register';
 import CompanyRegister from './Components/Register/Company_register';
 import Seller_Home from './Components/Dashboard/Seller-Dashboard/Seller_Home';
+import Seller_Cart from './Components/Dashboard/Seller-Dashboard/Seller_Cart';
+import Seller_History from './Components/Dashboard/Seller-Dashboard/Seller_History';
 
 
 
@@ -17,7 +19,7 @@ function App() {
   return (
 
     <div className="App">
-      <Navbar></Navbar>
+      
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
@@ -31,6 +33,10 @@ function App() {
       <Route path="/vendor" element={<Login />} />
       <Route path="/company" element={<Login />} />
       <Route path="/SellerHome" element={<Seller_Home/>}/>
+      <Route path="/SellerCart" element={<Seller_Cart/>}/>     
+      <Route path="/SellerHistory" element={<Seller_History/>}/>
+
+
     </Routes>
     
     </div>
