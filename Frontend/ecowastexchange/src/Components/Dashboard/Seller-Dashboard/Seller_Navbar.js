@@ -26,7 +26,7 @@ const Seller_Navbar = () => {
        <img src='Logo.png' alt="" /> 
       </div>
       <div className="navbar-links-container3">
-        <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Seller Gadget<ArrowDropDownIcon /></a>
+        <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget<ArrowDropDownIcon /></a>
         {SellerOpen && (
           <div className="dropdown-menu-sellergadget">
             {SellerOptions.map((option, index) => (
