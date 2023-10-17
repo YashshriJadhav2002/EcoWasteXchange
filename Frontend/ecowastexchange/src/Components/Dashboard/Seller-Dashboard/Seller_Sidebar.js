@@ -34,10 +34,10 @@ const Seller_Sidebar = ({children}) => {
         }
     ]
     return (
-        <div className="container">
+        <div className="container-sidebar">
            <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
                <div className="top_section">
-                   <img src='Logo.png' className='logo' />
+                   
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
                    </div>

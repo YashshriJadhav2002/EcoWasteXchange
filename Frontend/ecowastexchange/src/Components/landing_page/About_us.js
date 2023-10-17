@@ -6,9 +6,11 @@ import Navbar from './Navbar';
 
     const InfoContainer = () => 
     {
+    
   return (
     
     <div >
+       <Navbar></Navbar>
       <h1 className='aboutus-heading' style={{color: "black"}}>About Us</h1><br></br>
       <div className="aboutus-underline"></div>
          <img src={AboutUs} className='aboutusimage' alt="" />

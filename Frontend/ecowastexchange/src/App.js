@@ -12,8 +12,6 @@ import CompanyRegister from './Components/Register/Company_register';
 import Seller_Home from './Components/Dashboard/Seller-Dashboard/Seller_Home';
 import Seller_Cart from './Components/Dashboard/Seller-Dashboard/Seller_Cart';
 import Seller_History from './Components/Dashboard/Seller-Dashboard/Seller_History';
-import Seller_Navbar from './Components/Dashboard/Seller-Dashboard/Seller_Navbar';
-import Seller_Sidebar from './Components/Dashboard/Seller-Dashboard/Seller_Sidebar';
 
 
 
@@ -21,7 +19,7 @@ function App() {
   return (
 
     <div className="App">
-      <Navbar></Navbar>
+      
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />

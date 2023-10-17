@@ -6,16 +6,14 @@ import {Routes,Route} from 'react-router-dom';
 import Seller_Navbar from './Seller_Navbar';
 
 const Seller_Cart = () => {
-  <Seller_Navbar/>
+  
     return (
+      <div>
+        <Seller_Navbar/>
         <Seller_Sidebar>
-        <Routes>
-          
-          <Route path="/SellerHome" element={<Seller_Home />} />
-          <Route path="/SellerCart" element={<Seller_Cart />} />
-          <Route path="/SellerHistory" element={<Seller_History />} />
-        </Routes>
-      </Seller_Sidebar>
+        <h1>seller cart</h1>
+        </Seller_Sidebar>
+      </div>
     );
 };
 

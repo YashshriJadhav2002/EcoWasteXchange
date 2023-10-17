@@ -23,7 +23,7 @@ const Seller_Navbar = () => {
   return (
     <nav className='heading'>
       <div className="">
-      {/* <img src={Logo} alt="" /> */}
+       <img src='Logo.png' alt="" /> 
       </div>
       <div className="navbar-links-container3">
         <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Seller Gadget<ArrowDropDownIcon /></a>

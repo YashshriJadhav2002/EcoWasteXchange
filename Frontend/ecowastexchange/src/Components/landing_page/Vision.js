@@ -6,9 +6,11 @@ import Navbar from './Navbar';
 
     const InfoContainer = () => 
     { 
+
    return (
     
     <div >
+       <Navbar></Navbar>
          <img src={vision} className='visionimage' alt="" />
          <div className="vision-container">
       <h1 style={{color: "green"}}>Vision</h1><br></br>

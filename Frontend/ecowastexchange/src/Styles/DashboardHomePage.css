@@ -3,12 +3,16 @@
 .heading {
     display: flex;
     align-items: center;  
-    background-color: #2e8f3e;
+    background-color:  linear-gradient(to right , white , green);
     justify-content: space-between;
     min-height: 10vh;
+    margin-left: 0vh;
+    margin-right: 0vh;
+    margin-top: 0vh;
   }
   .navbar-menu-container3 {
     display: none;
+    margin-top: 0vh;
     
   }
   
@@ -18,7 +22,7 @@
     color: black;
     font-size: 1.2rem;
     font-weight: 600;
-    
+    margin-top: 0vh;
   }
   .navbar-links-container3 a:hover {
     text-decoration: underline;

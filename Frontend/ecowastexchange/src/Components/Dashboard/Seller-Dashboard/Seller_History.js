@@ -5,15 +5,13 @@ import Seller_Navbar from './Seller_Navbar';
 import Seller_Cart from './Seller_Cart';
 import {Routes,Route} from 'react-router-dom';
 const Seller_History = () => {
-  <Seller_Navbar/>
     return (
-<Seller_Sidebar>
-        <Routes>
-        <Route path="/SellerHome" element={<Seller_Home />} />
-          <Route path="/SellerCart" element={<Seller_Cart />} />
-          <Route path="/SellerHistory" element={<Seller_History />} />
-        </Routes>
-      </Seller_Sidebar>
+      <div>
+      <Seller_Navbar/>
+      <Seller_Sidebar>
+        <h1> seller history</h1>
+        </Seller_Sidebar>
+        </div>
     );
 };
 

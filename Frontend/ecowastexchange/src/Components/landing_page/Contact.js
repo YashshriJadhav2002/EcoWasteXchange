@@ -11,8 +11,8 @@ import Navbar from './Navbar';
 
 const Contact = () => {
   return (
-<body>
     <div >
+    <Navbar></Navbar>
       <span ></span>
       <img src="img/shape.png" class="square" alt="" />
       <div class="form">
@@ -84,7 +84,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-  </body>
+  
   )}
 
 export default Contact; 
