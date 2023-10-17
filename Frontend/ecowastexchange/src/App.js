@@ -12,8 +12,8 @@ import CompanyRegister from './Components/Register/Company_register';
 import Seller_Home from './Components/Dashboard/Seller-Dashboard/Seller_Home';
 import Seller_Cart from './Components/Dashboard/Seller-Dashboard/Seller_Cart';
 import Seller_History from './Components/Dashboard/Seller-Dashboard/Seller_History';
-import SmartPhones from './Components/Dashboard/Seller-Dashboard/SmartPhones';
 
+import Seller_Settings from './Components/Dashboard/Seller-Dashboard/Seller_Settings';
 
 function App() {
   return (
@@ -35,8 +35,8 @@ function App() {
       <Route path="/SellerHome" element={<Seller_Home/>}/>
       <Route path="/SellerCart" element={<Seller_Cart/>}/>     
       <Route path="/SellerHistory" element={<Seller_History/>}/>
-      <Route path='/Smart Phones' element={<SmartPhones/>}/>
-
+      
+      <Route path='/Settings' element={<Seller_Settings/>}/>
     </Routes>
     
     </div>
