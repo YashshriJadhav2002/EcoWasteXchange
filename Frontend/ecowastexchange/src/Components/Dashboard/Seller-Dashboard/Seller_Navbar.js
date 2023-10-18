@@ -1,6 +1,7 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 import { useState, useEffect } from 'react';
+import '../../../Styles/DashboardHomePage.css'
 
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import '../../../Styles/DashboardHomePage.css';
@@ -27,7 +28,7 @@ const Seller_Navbar = () => {
 
   const [ProfileOpen, setProfileOptions] = useState(false);
   const [SellerOpen, setSellerOptions] = useState(false);
-  const dropdownContainerRef=useRef(null);
+
   const sellerOptions = ["Smartphones", "Earbud", "Laptop"];
   const settingOptions = ["Settings", "Logout"];
 

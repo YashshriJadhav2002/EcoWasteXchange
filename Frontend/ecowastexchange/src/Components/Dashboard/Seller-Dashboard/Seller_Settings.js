@@ -1,6 +1,7 @@
 import React from "react";
 import {useState, useEffect} from "react"
-import Seller_Navbar from "./Seller_Navbar";
+import seller from "../../../Images/seller.jpg"
+import { useState,useEffect } from "react";
 import "../../../Styles/Seller_Settings.css"
 const Seller_Settings = () => {
 
@@ -48,7 +49,7 @@ const Seller_Settings = () => {
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={formData.Image} alt="" />
+              <img src={seller} alt="" />
                 
               </div>
     
@@ -63,7 +64,7 @@ const Seller_Settings = () => {
                 </div>
                 <label for="">Phone Number</label>
                 <div class="inputvalues-container">
-                  <input type="tel" placeholder="phone" value={formData.Phone} class="contact-input" />
+                  <input type="tel" value={formData.Phone} class="contact-input" />
                 </div>
 
                 <label for="">Address</label>
@@ -86,7 +87,7 @@ const Seller_Settings = () => {
                 <input type="state" value={formData.State} class="contact-input" />
                 </div>
 
-                <input type="submit" value="Send" class="btn" />
+               
               </form>
             </div>
           </div>
