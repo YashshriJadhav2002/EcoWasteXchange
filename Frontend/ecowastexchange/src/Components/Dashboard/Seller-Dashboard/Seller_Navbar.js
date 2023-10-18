@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { useState, useEffect } from 'react';
 import '../../../Styles/DashboardHomePage.css'
 
@@ -9,7 +9,7 @@ import '../../../Styles/DashboardHomePage.css';
 const Seller_Navbar = () => {
 
   const [data, setData] = useState('')
-
+  
   useEffect(()=> {
 
     const sellerInfo = localStorage.getItem("sellerInfo")
@@ -26,7 +26,7 @@ const Seller_Navbar = () => {
 
   const [ProfileOpen, setProfileOptions] = useState(false);
   const [SellerOpen, setSellerOptions] = useState(false);
-
+  const dropdownContainerRef=useRef(null);
   const sellerOptions = ["Smartphones", "Earbud", "Laptop"];
   const settingOptions = ["Settings", "Logout"];
 
@@ -70,10 +70,10 @@ const Seller_Navbar = () => {
             ))}
           </div>
         )}
-        <a href="#" onClick={() => setProfileOptions(!profileOpen)}>
+        <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
           <img src='Logo.png' alt="" /><ArrowDropDownIcon />
         </a>
-        {profileOpen && (
+        {ProfileOpen && (
           <div className="dropdown-menu3">
             {settingOptions.map((option, index) => (
               <a href={option} key={option}>
