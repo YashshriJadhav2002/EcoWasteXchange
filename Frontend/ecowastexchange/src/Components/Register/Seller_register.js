@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import '../../../src/Styles/Register.css';
 import Navbar from '../landing_page/Navbar';
+
 const SellerRegister = () => {
-  let name,email,phone,address,city,state,password,database
+  let name,email,phone,address,city,state,password,database,Image
 
   const [formData, setFormData] = useState({
     Name: '',
@@ -12,8 +13,10 @@ const SellerRegister = () => {
     City: '',
     State: '',
     Password:'',
-    Image: null,
+    Avatar:'',
+    
   });
+
 
   const [errors,setErrors]=useState({
     Name: '',
@@ -23,8 +26,8 @@ const SellerRegister = () => {
     City: '',
     State: '',
     Password:'',
-    Image: null,
-    database:"",
+    Avatar: '',
+    database:'',
 
   })
 
@@ -37,30 +40,49 @@ const SellerRegister = () => {
     });
   };
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setFormData({
-      ...formData,
-      image: file,
-    });
-  };
+  const postDetails=(pics)=>{
+  
+    if(pics.type==='image/jpg'||pics.type==='image/png'||pics.type==='image/jpeg')
+    {
+      const data=new FormData();
+      data.append('file',pics);
+      data.append('upload_preset','Ecowastemanagement')
+      data.append('cloud_name','dfjwwbdv6')
+      fetch('https://api.cloudinary.com/v1_1/dfjwwbdv6/image/upload',{
+        method:"post",
+        body:data,
+
+      }).then((res)=>res.json()).then((data)=>{
+        console.log(data)
+        setFormData({...formData,Avatar:data.url.toString()})
+      }).catch((err)=>{
+        console.log(err);
+      })
+    }
+    else
+    setErrors({...errors,Avatar:"Invalid File Format"})
+  }
 
   const postData= async(e)=>{
+    
     e.preventDefault()
-
-    const {Name,Email,Phone,Address,City,State,Password}=formData;
-
+    if(errors.Avatar=="")
+    {
+    const {Name,Email,Phone,Address,City,State,Password,Avatar}=formData;
+  
     const res = await fetch("/api/seller/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify
     ({
-        Name,Email,Phone,Address,City,State,Password
+        Name,Email,Phone,Address,City,State,Password,Avatar
     })
   
   })
+
 
   const data = await res.json()
   if(res.status===200)
   {
     
+
     window.alert(data.message)
     setErrors({Name: '',
     Phone: '',
@@ -69,7 +91,7 @@ const SellerRegister = () => {
     City: '',
     State: '',
     Password:'',
-    Image: null,
+    Image: '',
     database:"",
 })
     window.location.href='/Seller'
@@ -102,6 +124,9 @@ const SellerRegister = () => {
         phone="** "+data.error[i].msg
       else if(data.error[i].path=="Database")
         database="** "+data.error[i].msg
+      else if(data.error[i].path=="Avatar")
+      Image="** "+data.error[i].msg
+
       
     }
       setErrors({
@@ -113,12 +138,14 @@ const SellerRegister = () => {
         Phone:phone,
         Password:password,
         database:database,
+        Avatar:Image,
       })
 
       
   }
 
   }
+}
 
   return (
     <div>
@@ -128,7 +155,7 @@ const SellerRegister = () => {
         <div className="register-text">Register</div>
         <div className="register-underline"></div>
       </div>
-      <form method='Post'>
+      <form method='Post' encType='multipart/form-data'>
         <div className="register-inputs">
         <span className='spanmsg'>{errors.database}</span>
           <div className="register-input">
@@ -217,9 +244,12 @@ const SellerRegister = () => {
               id="image"
               type="file"
               accept="image/*"
-              onChange={handleImageChange}
+              onChange={(e)=>postDetails(e.target.files[0])}
+          
             /><br></br>
           </div>
+          <span className='spanmsg'>{errors.Avatar}</span>
+
         </div>
         <div className="register-submit-container">
           <button type="register-submit" className="register-submit" onClick={postData}>Sign Up</button>

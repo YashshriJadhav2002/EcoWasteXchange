@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../../src/Styles/Register.css';
 import Navbar from '../landing_page/Navbar';
 const CompanyRegister = () => {
-  let name,email,phone,address,city,state,password,database
+  let name,email,phone,address,city,state,password,database,Image
 
   const [formData, setFormData] = useState({
     Name: '',
@@ -12,7 +12,7 @@ const CompanyRegister = () => {
     City: '',
     State: '',
     Password:'',
-    Image: null,
+    Avatar: '',
     Document:null,
   });
 
@@ -24,7 +24,7 @@ const CompanyRegister = () => {
     City: '',
     State: '',
     Password:'',
-    Image: null,
+    Image: '',
     Document:null,
     Database:"",
 
@@ -39,17 +39,35 @@ const CompanyRegister = () => {
     });
   };
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setFormData({
-      ...formData,
-      image: file,
-    });
-  };
+  const postDetails=(pics)=>{
+  
+    if(pics.type==='image/jpg'||pics.type==='image/png'||pics.type==='image/jpeg')
+    {
+      const data=new FormData();
+      data.append('file',pics);
+      data.append('upload_preset','Ecowastemanagement')
+      data.append('cloud_name','dfjwwbdv6')
+      fetch('https://api.cloudinary.com/v1_1/dfjwwbdv6/image/upload',{
+        method:"post",
+        body:data,
+
+      }).then((res)=>res.json()).then((data)=>{
+        console.log(data)
+        setFormData({...formData,Avatar:data.url.toString()})
+      }).catch((err)=>{
+        console.log(err);
+      })
+    }
+    else
+    setErrors({...errors,Avatar:"Invalid File Format"})
+  }
 
   const postData= async(e)=>{
+    
     e.preventDefault()
 
+    if(errors.Image=="")
+    {
     const {Name,Email,Phone,Address,City,State,Password}=formData;
 
     const res = await fetch("/api/company/register",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify
@@ -116,7 +134,7 @@ window.location.href='/Company'
         Database:database,
       })
 
-      
+    }
   }
 
   }
@@ -129,7 +147,7 @@ window.location.href='/Company'
         <div className="register-text">Register</div>
         <div className="register-underline"></div>
       </div>
-      <form method='post'>
+      <form method='post' encType='multipart/form-data'>
         <div className="register-inputs">
         <span className='spanmsg'>{errors.Database}</span>
           <div className="register-input">
@@ -212,7 +230,7 @@ window.location.href='/Company'
               id="profile-photo"
               type="file"
               accept="image/*"
-              onChange={(e) => handleImageChange(e, "profilePhoto")}
+              onChange={(e)=>postDetails(e.target.files[0])}
             />
           </div>
           <div className="register-upload-image">
@@ -221,7 +239,7 @@ window.location.href='/Company'
               id="Document"
               type="file"
               accept="image/*"
-              onChange={(e) => handleImageChange(e, "Document")}
+              onChange={(e)=>postDetails(e.target.files[0])}
             />
           </div>
         </div>

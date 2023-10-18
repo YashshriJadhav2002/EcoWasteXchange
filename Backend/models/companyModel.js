@@ -30,6 +30,21 @@ const  CompanySchema = new schema({
     Password: {
         type: String,
         
+    },
+    City:
+    {
+        type:String,
+       
+    
+    },
+    State:{
+        type:String,
+    
+    },
+    Avatar:{
+        type:String,
+        default:"https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
+
     }
 
     

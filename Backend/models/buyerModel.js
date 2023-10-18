@@ -39,6 +39,11 @@ const BuyerSchema = new schema({
     State: {
         type: String
 
+    },
+    Avatar:{
+        type:String,
+        default:"https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
+
     }
 
 

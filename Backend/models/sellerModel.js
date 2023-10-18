@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const schema = mongoose.Schema
-
+const jwt = require('jsonwebtoken')
 const SellerSchema = new schema({
 
     Name : {
@@ -31,7 +31,6 @@ const SellerSchema = new schema({
 
     Email:{
         type: String,
-       
         unique:true
     },
     Password:{
@@ -40,8 +39,36 @@ const SellerSchema = new schema({
     },
     Avatar:{
         type:String,
+        default:"https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
     }
+    ,
+    tokens: [
+        {
+            token: {
+
+                type:String,
+                required:true
+
+            }
+        }
+
+    ]
+     
 
 })
 
+
+SellerSchema.methods.generateAuthToken = async function () {
+
+    try {
+
+        let token = jwt.sign({_id:this._id}, process.env.SECRET_KEY)
+        this.tokens = this.tokens.concat({token: token});
+        await this.save();
+        return token;
+        
+    } catch(err) {
+        console.log(err);
+    }
+}
 module.exports = mongoose.model('Seller', SellerSchema)

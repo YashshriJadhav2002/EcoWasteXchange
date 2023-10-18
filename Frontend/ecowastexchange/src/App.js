@@ -16,6 +16,7 @@ import Seller_Settings from './Components/Dashboard/Seller-Dashboard/Seller_Sett
 import SmartPhones from './Components/Dashboard/Seller-Dashboard/SmartPhones';
 import Earbuds from './Components/Dashboard/Seller-Dashboard/Earbuds';
 import Laptop from './Components/Dashboard/Seller-Dashboard/Laptop';
+import Seller_Logout from './Components/Dashboard/Seller-Dashboard/Seller_Logout';
 import Exact_Price from './Components/Dashboard/Seller-Dashboard/Exact_Price';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
       <Route path="/Laptop" element={<Laptop/>}/>
       <Route path="/ExactPrice" element={<Exact_Price/>}/>
       <Route path='/Settings' element={<Seller_Settings/>}/>
+      <Route path='/Logout' element={<Seller_Logout/>} />
     </Routes>
     
     </div>

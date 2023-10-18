@@ -1,10 +1,31 @@
-import React, { useState, useEffect, useRef } from 'react';
+
+import React from 'react';
+import { useState, useEffect, useRef } from 'react';
+import '../../../Styles/DashboardHomePage.css'
+
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import '../../../Styles/DashboardHomePage.css';
 
 const Seller_Navbar = () => {
-  const [profileOpen, setProfileOptions] = useState(false);
-  const [sellerOpen, setSellerOptions] = useState(false);
+
+  const [data, setData] = useState('')
+
+  useEffect(()=> {
+
+    const sellerInfo = localStorage.getItem("sellerInfo")
+
+    
+    if(sellerInfo)
+    {
+
+      const sellerData = JSON.parse(sellerInfo)
+      setData(sellerData.Name)
+    }
+
+})
+
+  const [ProfileOpen, setProfileOptions] = useState(false);
+  const [SellerOpen, setSellerOptions] = useState(false);
   const dropdownContainerRef = useRef(null);
 
   const sellerOptions = ["Smartphones", "Earbud", "Laptop"];
@@ -34,11 +55,14 @@ const Seller_Navbar = () => {
       <div className="">
         <img src='Logo.png' alt="" />
       </div>
-      <div className="navbar-links-container3" ref={dropdownContainerRef}>
-        <a href="#" onClick={() => setSellerOptions(!sellerOpen)}>
-          Sell Gadget<ArrowDropDownIcon />
-        </a>
-        {sellerOpen && (
+      <div className='Welcome-seller'>
+        <h2>WELCOME, {data}</h2>
+
+
+      </div>
+      <div className="navbar-links-container3">
+        <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget<ArrowDropDownIcon /></a>
+        {SellerOpen && (
           <div className="dropdown-menu-sellergadget">
             {sellerOptions.map((option, index) => (
               <a href={option} key={option}>
@@ -47,10 +71,10 @@ const Seller_Navbar = () => {
             ))}
           </div>
         )}
-        <a href="#" onClick={() => setProfileOptions(!profileOpen)}>
+        <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
           <img src='Logo.png' alt="" /><ArrowDropDownIcon />
         </a>
-        {profileOpen && (
+        {ProfileOpen && (
           <div className="dropdown-menu3">
             {settingOptions.map((option, index) => (
               <a href={option} key={option}>
