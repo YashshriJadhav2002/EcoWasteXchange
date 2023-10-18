@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import seller from "../../../Images/seller.jpg"
 import "../../../Styles/Seller_Settings.css"
-import Seller_Navbar from './Seller_Navbar';
 const Seller_Settings = () => {
 
     

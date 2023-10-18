@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import '../../../Styles/DashboardHomePage.css'
 
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-
+import '../../../Styles/DashboardHomePage.css';
 
 const Seller_Navbar = () => {
 
@@ -27,20 +27,32 @@ const Seller_Navbar = () => {
   const [ProfileOpen, setProfileOptions] = useState(false);
   const [SellerOpen, setSellerOptions] = useState(false);
 
-  const SellerOptions = [
-    "Smartphones",
-    "Earbud",
-    "Laptop",
-  ];
+  const sellerOptions = ["Smartphones", "Earbud", "Laptop"];
+  const settingOptions = ["Settings", "Logout"];
 
-  const SettingOptions = [
-    "Settings",
-    "Logout",
-  ];
+  useEffect(() => {
+    // Add a click event listener to the document
+    const handleClickOutside = (event) => {
+      if (dropdownContainerRef.current && !dropdownContainerRef.current.contains(event.target)) {
+        // Click occurred outside the dropdowns, close both dropdowns
+        setProfileOptions(false);
+        setSellerOptions(false);
+      }
+    };
+
+    // Attach the event listener
+    document.addEventListener('click', handleClickOutside);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []); // Empty dependency array means this effect runs once after the initial render
+
   return (
     <nav className='heading'>
       <div className="">
-       <img src='Logo.png' alt="" /> 
+        <img src='Logo.png' alt="" />
       </div>
       <div className='Welcome-seller'>
         <h2>WELCOME, {data}</h2>
@@ -51,19 +63,19 @@ const Seller_Navbar = () => {
         <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget<ArrowDropDownIcon /></a>
         {SellerOpen && (
           <div className="dropdown-menu-sellergadget">
-            {SellerOptions.map((option, index) => (
+            {sellerOptions.map((option, index) => (
               <a href={option} key={option}>
                 {option}
               </a>
             ))}
           </div>
         )}
-        <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
-          <img src='Logo.png' /><ArrowDropDownIcon />
+        <a href="#" onClick={() => setProfileOptions(!profileOpen)}>
+          <img src='Logo.png' alt="" /><ArrowDropDownIcon />
         </a>
-        {ProfileOpen && (
+        {profileOpen && (
           <div className="dropdown-menu3">
-            {SettingOptions.map((option, index) => (
+            {settingOptions.map((option, index) => (
               <a href={option} key={option}>
                 {option}
               </a>

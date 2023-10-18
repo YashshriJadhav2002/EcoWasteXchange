@@ -12,15 +12,17 @@
   display: none;
   margin-top: 0vh;
   
+  
 }
 
 .navbar-links-container3 a {
-  margin-right: 3rem;
+  margin-right: 10px;
   text-decoration: none;
   color: black;
   font-size: 1.2rem;
   font-weight: 600;
   margin-top: 0vh;
+  margin-left: 70px;
 }
 .navbar-links-container3 a:hover {
   text-decoration: underline;
@@ -54,5 +56,6 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
+  
   min-width: 120px; /* Adjust the minimum width as needed */
 }
