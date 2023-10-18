@@ -54,16 +54,16 @@
 
 .smartphone-container{
     display: flex;
-    flex-direction: column;
-    margin:auto;
-    width:50vw;
+    width:40vw;
     margin-top: -76vh;
-    padding-top: 0;
-    padding-left: 50vh;
+    padding-left: 5vh;
+    background-color: white;
     font-family: 'Abril Fatface', cursive;
-    margin-bottom: 10px;
+    margin-left: 80vh;
     height:100vh; 
-    margin-top: -58 0px;
+    border: 2px solid #ccc;
+    border-radius: 5vh;
+   
    }
 .body
 {
@@ -90,6 +90,7 @@
     } */
     .smartphone-inputs{
         margin-top: -20px;
+    
         display:flex;
         flex-direction:column;
         gap:10px;

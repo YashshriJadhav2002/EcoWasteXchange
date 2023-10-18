@@ -162,7 +162,7 @@ return (
         </div>
         
         <div className="smartphone-submit-container">
-          <div className="smartphone-submit">Continue</div>
+        <button type='continue' className="smartphone-submit" onClick={() =>window.location.href = '/ExactPrice'}>Continue</button>
         </div>
       </form>
     </div>
