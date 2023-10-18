@@ -1,80 +1,95 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import seller from "../../../Images/seller.jpg"
 import "../../../Styles/Seller_Settings.css"
+import Seller_Navbar from './Seller_Navbar';
 const Seller_Settings = () => {
 
+    
+    const [formData, setFormData] = useState({
+        Name: '',
+        Phone: '',
+        Address: '',
+        Email: '',
+        City: '',
+        State: '',
+        Image: null,
+      });
+    
+    useEffect(()=> {
+
+        const sellerInfo = localStorage.getItem("sellerInfo")
+  
+        
+        if(sellerInfo)
+        {
+  
+          const data = JSON.parse(sellerInfo)
+          setFormData({
+
+            Name: data.Name,
+            Phone: data.Phone,
+            Address: data.Address,
+            Email: data.Email,
+            City: data.City,
+            State: data.State,
+            Image: null,
+
+
+          }) 
+        }
+  
+    })
 
     return (
 
-        <div className="seller-container">
-            <div className="seller-datas">
-                    <div className="seller-data-image">
-                        <img src={seller} alt="seller"></img>
-                    </div>
-                    <div className="seller-data-form">
-                    <form >
-                        <div className="seller-data">
-                            <label>SellerName</label>
-                            <input 
-                                type="text"
-                                name="Name"
-                            />
+        <div >
+        <Seller_Navbar></Seller_Navbar>
+          
+          <div class="sellersetting-container">
+            <div class="photo">
+              
+              <img src={seller} alt="" />
+                
+              </div>
+    
+    
+            <div class="contact-form">
+              <form action="index.html" autocomplete="off">
+                <h3 class="title">User data</h3>
+                <label for="">Seller Name</label>
+                <div class="inputvalues-container">
+                  <input type="text" name="name" value={formData.Name} class="contact-input" />
+                  
+                </div>
+                <label for="">Phone Number</label>
+                <div class="inputvalues-container">
+                  <input type="tel" placeholder="phone" value={formData.Phone} class="contact-input" />
+                </div>
 
-                        </div>
+                <label for="">Address</label>
+                <div class="inputvalues-container textarea">
+                <textarea name="text" value={formData.Address} class="contact-input"></textarea>
+                </div>
 
-                        <div className="seller-data">
-                            <label>Phone no</label>
-                            <input 
-                                type="number"
-                                name="Phone"
-                            />
+                <label for="">Email</label>
+                <div class="inputvalues-container">
+                <input type="email" value={formData.Email} class="contact-input" />
+                </div>
 
-                        </div>
+                <label for="">City</label>
+                <div class="inputvalues-container">
+                <input type="city" value={formData.City} class="contact-input" />
+                </div>
 
-                        <div className="seller-data">
-                            <label>Address</label>
-                            <input 
-                                type="text"
-                                name="Address"
-                            />
+                <label for="">State</label>
+                <div class="inputvalues-container">
+                <input type="state" value={formData.State} class="contact-input" />
+                </div>
 
-                        </div>
-
-                        <div className="seller-data">
-                            <label>Email</label>
-                            <input 
-                                type="email"
-                                name="email"
-                            />
-
-                        </div>
-
-                        <div className="seller-data">
-                            <label>City</label>
-                            <input 
-                                type="text"
-                                name="city"
-                            />
-
-                        </div>
-
-                        <div className="seller-data">
-                            <label>State</label>
-                            <input 
-                                type="text"
-                                name="state"
-                            />
-
-                        </div>
-                        
-                        
-                        
-                        
-                        
-
-                    </form>
-                    </div>
+                <input type="submit" value="Send" class="btn" />
+              </form>
             </div>
+          </div>
         </div>
     )
 }

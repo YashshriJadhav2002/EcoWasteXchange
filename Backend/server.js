@@ -12,6 +12,7 @@ const buyerLogin = require('./routes/buyerLogin')
 const sellerLogin = require('./routes/sellerLogin')
 
 
+
 const app = express()
 
 //middleware
@@ -30,6 +31,7 @@ app.use('/api/company/register', companyRegister)
 app.use('/api/seller/login', sellerLogin)
 app.use('/api/buyer/login', buyerLogin)
 app.use('/api/company/login', companyLogin)
+
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {

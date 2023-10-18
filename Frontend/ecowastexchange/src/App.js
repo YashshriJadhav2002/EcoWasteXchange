@@ -16,7 +16,7 @@ import Seller_Settings from './Components/Dashboard/Seller-Dashboard/Seller_Sett
 import SmartPhones from './Components/Dashboard/Seller-Dashboard/SmartPhones';
 import Earbuds from './Components/Dashboard/Seller-Dashboard/Earbuds';
 import Laptop from './Components/Dashboard/Seller-Dashboard/Laptop';
-
+import Seller_Logout from './Components/Dashboard/Seller-Dashboard/Seller_Logout';
 function App() {
   return (
 
@@ -41,6 +41,7 @@ function App() {
       <Route path="/Earbud" element={<Earbuds/>}/>
       <Route path="/Laptop" element={<Laptop/>}/>
       <Route path='/Settings' element={<Seller_Settings/>}/>
+      <Route path='/Logout' element={<Seller_Logout/>} />
     </Routes>
     
     </div>
