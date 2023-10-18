@@ -1,8 +1,8 @@
 import React from "react";
-import {useState, useEffect} from "react";
-import seller from "../../../Images/seller.jpg";
-import "../../../Styles/Seller_Settings.css";
-import Seller_Navbar from "./Seller_Navbar";
+import {useState, useEffect} from "react"
+import seller from "../../../Images/seller.jpg"
+import { useState,useEffect } from "react";
+import "../../../Styles/Seller_Settings.css"
 const Seller_Settings = () => {
 
     
@@ -33,7 +33,7 @@ const Seller_Settings = () => {
             Email: data.Email,
             City: data.City,
             State: data.State,
-            Image: null,
+            Image: data.Avatar,
 
 
           }) 
@@ -49,8 +49,8 @@ const Seller_Settings = () => {
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={seller} alt="round-image" />
-              <input type="submit" value="Edit Profile" class="submit-button" />
+              <img src={seller} alt="" />
+                
               </div>
     
     
