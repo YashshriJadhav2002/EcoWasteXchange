@@ -1,82 +1,63 @@
 import React from "react";
 import seller from "../../../Images/seller.jpg"
-import "../../../Styles/Seller_Settings.css"
+import "../../../Styles/Seller_Settings.css";
+
+import Seller_Navbar from "./Seller_Navbar";
+
 const Seller_Settings = () => {
 
-
     return (
+        <div >
+        <Seller_Navbar></Seller_Navbar>
+          
+          <div class="sellersetting-container">
+            <div class="photo">
+              
+              <img src={seller} alt="" />
+                
+              </div>
+    
+    
+            <div class="contact-form">
+              <form action="index.html" autocomplete="off">
+                <h3 class="title">User data</h3>
+                <label for="" style={{"color":"white"}}>Seller Name</label>
+                <div class="inputvalues-container">
+                  <input type="text" name="name" class="contact-input" />
+                  
+                </div>
+                <label for="" style={{"color":"white"}}>Phone Number</label>
+                <div class="inputvalues-container">
+                  <input type="tel" placeholder="phone" class="contact-input" />
+                </div>
 
-        <div className="seller-container">
-            <div className="seller-datas">
-                    <div className="seller-data-image">
-                        <img src={seller} alt="seller"></img>
-                    </div>
-                    <div className="seller-data-form">
-                    <form >
-                        <div className="seller-data">
-                            <label>SellerName</label>
-                            <input 
-                                type="text"
-                                name="Name"
-                            />
+                <label for="" style={{"color":"white"}}>Address</label>
+                <div class="inputvalues-container textarea">
+                <textarea name="text" class="contact-input"></textarea>
+                </div>
 
-                        </div>
+                <label for="" style={{"color":"white"}}>Email</label>
+                <div class="inputvalues-container">
+                <input type="email" class="contact-input" />
+                </div>
 
-                        <div className="seller-data">
-                            <label>Phone no</label>
-                            <input 
-                                type="number"
-                                name="Phone"
-                            />
+                <label for="" style={{"color":"white"}}>City</label>
+                <div class="inputvalues-container">
+                <input type="city" class="contact-input" />
+                </div>
 
-                        </div>
+                <label for="" style={{"color":"white"}}>State</label>
+                <div class="inputvalues-container">
+                <input type="state" class="contact-input" />
+                </div>
 
-                        <div className="seller-data">
-                            <label>Address</label>
-                            <input 
-                                type="text"
-                                name="Address"
-                            />
-
-                        </div>
-
-                        <div className="seller-data">
-                            <label>Email</label>
-                            <input 
-                                type="email"
-                                name="email"
-                            />
-
-                        </div>
-
-                        <div className="seller-data">
-                            <label>City</label>
-                            <input 
-                                type="text"
-                                name="city"
-                            />
-
-                        </div>
-
-                        <div className="seller-data">
-                            <label>State</label>
-                            <input 
-                                type="text"
-                                name="state"
-                            />
-
-                        </div>
-                        
-                        
-                        
-                        
-                        
-
-                    </form>
-                    </div>
+                <input type="submit" value="Edit Profile" class="btn" />
+              </form>
             </div>
+          </div>
         </div>
-    )
-}
+      
+      )}
+    
 
 export default Seller_Settings;
