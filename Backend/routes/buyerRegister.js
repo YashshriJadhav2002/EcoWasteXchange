@@ -32,7 +32,7 @@ router.post('/',[
             const salt=await bcrypt.genSalt(10)
             const securepass=await bcrypt.hash(reqpassword,salt)
             req.body.Password=securepass;
-            const {Name, Phone, Address, Email, Password, City, State} = req.body
+            const {Name, Phone, Address, Email, Password, City, State,Avatar} = req.body
 
             try{
                 const existingUser=await Buyer.findOne({Email:req.body.Email})
@@ -46,7 +46,7 @@ router.post('/',[
                 }
                 
                 
-                const buyer = await Buyer.create({Name, Phone, Address, Email, Password, City, State})
+                const buyer = await Buyer.create({Name, Phone, Address, Email, Password, City, State,Avatar})
                 res.status(200).json({message: "Data inserted successfully"})
 
             }catch(error){
