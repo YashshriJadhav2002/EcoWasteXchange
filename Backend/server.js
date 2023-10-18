@@ -30,6 +30,7 @@ app.use('/api/seller/login', sellerLogin)
 app.use('/api/buyer/login', buyerLogin)
 app.use('/api/company/login', companyLogin)
 
+
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
 
