@@ -4,11 +4,12 @@ import Seller_Navbar from "./Seller_Navbar";
 
 function SmartPhones() {
     const [formData, setFormData] = useState({
-        question1 : 'What is Buying cost of product?',
-        question2 : 'Enter Age of the product',
-        question3 : "Is ths dislay of phone real?",
-        question4 : 'What is Physical condition of product?',
-        question5 : 'Is product is second handed?'
+        question1 : 'What is the name of your product?',
+        question2 : 'What is Buying cost of product?',
+        question3 : 'Enter Age of the product',
+        question4 : "Is ths dislay of phone real?",
+        question5 : 'What is Physical condition of product?',
+        question6 : 'Is product is second handed?'
       });
     
       const handleInputChange = (e) => {
@@ -130,7 +131,7 @@ function SmartPhones() {
               onChange={handleInputChange}
             />
           </div>
-          <label>{formData.question2}</label>
+        <label>{formData.question2}</label>
           <div className="smartphone-input">
             <input
               type="text"
@@ -138,13 +139,22 @@ function SmartPhones() {
               onChange={handleInputChange}
             />
           </div>
-          <label>{formData.question3}</label>
+          <label>{formData.question2}</label>
+          <div className="smartphone-input">
+            <input
+              type="text"
+              name="question3"
+              onChange={handleInputChange}
+            />
+          </div>
+          
+          <label>{formData.question4}</label>
           <div>
           <input type="radio" value="Yes" name="real-display" />Yes<br></br>
             <input type="radio" value="No" name="real-display" /> No
               
           </div>
-          <label>{formData.question4}</label>
+          <label>{formData.question5}</label>
           <div>
             <input type="radio" value="Good" name="physical-condition" /> Good <br></br>
             <input type="radio" value="Better" name="physical-condition" />Better<br></br>
@@ -152,7 +162,7 @@ function SmartPhones() {
               
         
           </div>
-          <label>{formData.question5}</label>
+          <label>{formData.question6}</label>
           <div>
           <input type="radio" value="Yes" name="second-hand" />Yes<br></br>
             <input type="radio" value="No" name="second-hand" /> No

@@ -30,6 +30,7 @@ nav {
   .home-banner-container {
     position: relative;
     display: flex;
+    margin-top: 55px;
     padding-top: 3rem;
     margin-left: 10vh;
   }
