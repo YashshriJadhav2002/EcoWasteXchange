@@ -1,63 +1,98 @@
 import React from "react";
+import {useState, useEffect} from "react";
 import seller from "../../../Images/seller.jpg";
 import "../../../Styles/Seller_Settings.css";
-
 import Seller_Navbar from "./Seller_Navbar";
-
 const Seller_Settings = () => {
 
+    
+    const [formData, setFormData] = useState({
+        Name: '',
+        Phone: '',
+        Address: '',
+        Email: '',
+        City: '',
+        State: '',
+        Image: null,
+      });
+    
+    useEffect(()=> {
+
+        const sellerInfo = localStorage.getItem("sellerInfo")
+  
+        
+        if(sellerInfo)
+        {
+  
+          const data = JSON.parse(sellerInfo)
+          setFormData({
+
+            Name: data.Name,
+            Phone: data.Phone,
+            Address: data.Address,
+            Email: data.Email,
+            City: data.City,
+            State: data.State,
+            Image: null,
+
+
+          }) 
+        }
+  
+    })
+
     return (
+
         <div >
         <Seller_Navbar></Seller_Navbar>
           
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={seller} alt="" />
-                
+              <img src={seller} alt="round-image" />
+              <input type="submit" value="Edit Profile" class="submit-button" />
               </div>
     
     
             <div class="contact-form">
               <form action="index.html" autocomplete="off">
                 <h3 class="title">User data</h3>
-                <label for="" style={{"color":"white"}}>Seller Name</label>
+                <label for="">Seller Name</label>
                 <div class="inputvalues-container">
-                  <input type="text" name="name" class="contact-input" />
+                  <input type="text" name="name" value={formData.Name} class="contact-input" />
                   
                 </div>
-                <label for="" style={{"color":"white"}}>Phone Number</label>
+                <label for="">Phone Number</label>
                 <div class="inputvalues-container">
-                  <input type="tel" placeholder="phone" class="contact-input" />
+                  <input type="tel" value={formData.Phone} class="contact-input" />
                 </div>
 
-                <label for="" style={{"color":"white"}}>Address</label>
+                <label for="">Address</label>
                 <div class="inputvalues-container textarea">
-                <textarea name="text" class="contact-input"></textarea>
+                <textarea name="text" value={formData.Address} class="contact-input"></textarea>
                 </div>
 
-                <label for="" style={{"color":"white"}}>Email</label>
+                <label for="">Email</label>
                 <div class="inputvalues-container">
-                <input type="email" class="contact-input" />
+                <input type="email" value={formData.Email} class="contact-input" />
                 </div>
 
-                <label for="" style={{"color":"white"}}>City</label>
+                <label for="">City</label>
                 <div class="inputvalues-container">
-                <input type="city" class="contact-input" />
+                <input type="city" value={formData.City} class="contact-input" />
                 </div>
 
-                <label for="" style={{"color":"white"}}>State</label>
+                <label for="">State</label>
                 <div class="inputvalues-container">
-                <input type="state" class="contact-input" />
+                <input type="state" value={formData.State} class="contact-input" />
                 </div>
 
-                <input type="submit" value="Edit Profile" class="btn" />
+               
               </form>
             </div>
           </div>
         </div>
-      
-      )}
-    
+    )
+}
 
 export default Seller_Settings;

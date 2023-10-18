@@ -3,6 +3,7 @@ const express = require('express')
 const Seller = require('../models/sellerModel')
 const router = express.Router()
 const bcrypt=require('bcrypt')
+
 const { validationResult, body } = require('express-validator')
 //routes
 router.post('/',[
@@ -11,7 +12,7 @@ router.post('/',[
 
 ],async(req,res)=>{
 
-
+    // let token;
     const error = validationResult(req)
     if(!error.isEmpty()) {
 
@@ -25,12 +26,15 @@ router.post('/',[
 
     else{
         const password=req.body.Password
-        bcrypt.compare(password,seller.Password,function(err,response){
-        if(response)
-        return res.status(200).json({message:"Login Successfull"})
-        else
-        return res.status(400).json({error:[{path:"Password",msg:"Incorrect Password"}]})
-                
+        bcrypt.compare(password,seller.Password, async function(err,response){
+
+            
+        
+            if(response)
+            return res.status(200).json({message:"Login Successfull", data: seller})
+            else
+            return res.status(400).json({error:[{path:"Password",msg:"Incorrect Password"}]})
+                    
         })
     }
 })

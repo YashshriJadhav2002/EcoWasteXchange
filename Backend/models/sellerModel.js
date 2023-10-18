@@ -31,7 +31,6 @@ const SellerSchema = new schema({
 
     Email:{
         type: String,
-       
         unique:true
     },
     Password:{
@@ -40,8 +39,11 @@ const SellerSchema = new schema({
     },
     Avatar:{
         type:String,
+        default:"https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
     }
 
+
 })
+
 
 module.exports = mongoose.model('Seller', SellerSchema)
