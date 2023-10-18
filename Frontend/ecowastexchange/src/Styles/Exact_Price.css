@@ -1,0 +1,39 @@
+.item-container{
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    width:65vw;
+    background-color: white;
+    margin-top: 10vh;
+    padding-top: 0;
+    padding-left: 50vh;
+    font-family: 'Abril Fatface', cursive;
+    margin-bottom: 10px;
+    height:60vh;    
+}
+
+.product-image{
+    width: 30vh;
+    height: 30vh;
+    margin-left: -40vh;
+    margin-top: 10vh;
+}
+
+.device-name{
+    margin-top: -30vh;
+    margin-left: -5vh;
+}
+
+.verticleline 
+    {
+        width: 0.2vw;
+        height:7vh;
+        background: black; 
+        margin-top: -7vh;
+        margin-left: 15vh;
+    }
+.textclass{
+    margin-left: 20vh;
+    margin-top: -5vh;
+    height: 10vh;
+}

@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import '../../../Styles/SellerGadget.css';
 import Seller_Navbar from "./Seller_Navbar";
 
-
 function SmartPhones() {
     const [formData, setFormData] = useState({
         question1 : 'What is Buying cost of product?',
@@ -161,7 +160,7 @@ function SmartPhones() {
         </div>
         
         <div className="smartphone-submit-container">
-          <div className="smartphone-submit">Continue</div>
+          <button type='continue' className="smartphone-submit" onClick={() =>window.location.href = '/ExactPrice'}>Continue</button>
         </div>
       </form>
     </div>
