@@ -84,21 +84,23 @@ textarea {
     overflow-y: auto;
   }
   
-.btn {
+.Edit_profile {
   padding: 0.6rem 1.3rem;
-  background-color: #fff;
+  background-color: #2e8f3e;
   border: 2px solid #fafafa;
   font-size: 0.95rem;
-  color: #2e8f3e;
+  color:white;
   line-height: 1;
   border-radius: 25px;
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  margin: 0;
+  margin-top: 30px;
+  margin-left:90px;
+  height:50px;
 }
 
-.btn:hover {
+.Edir_profile:hover {
   background-color: transparent;
   color: #fff;
 }

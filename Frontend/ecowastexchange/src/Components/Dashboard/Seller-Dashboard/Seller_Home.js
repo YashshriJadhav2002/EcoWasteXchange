@@ -7,10 +7,14 @@ import Seller_Navbar from './Seller_Navbar';
 import '../../../Styles/DashboardHomePage.css';
 
 const photosData = [
-  { id: 1, src: phone, name: 'Photo 1' },
-  { id: 2, src: phone, name: 'Photo 2' },
-  { id: 3, src: About_us, name: 'Photo 3' },
-  { id: 4, src: phone, name: 'Photo 4' },
+  { id: 1, src: phone, name: 'Photo 1',name1:'Rs.30000' },
+  { id: 2, src: phone, name: 'Photo 2',name1:'Rs.30000' },
+  { id: 3, src: About_us, name: 'Photo 3',name1:'Rs.30000' },
+  { id: 4, src: phone, name: 'Photo 4',name1:'Rs.30000' },
+  { id: 5, src: phone, name: 'Photo 1',name1:'Rs.30000' },
+  { id: 6, src: phone, name: 'Photo 2',name1:'Rs.30000' },
+  { id: 7, src: About_us, name: 'Photo 3',name1:'Rs.30000' },
+  { id: 8, src: phone, name: 'Photo 4',name1:'Rs.30000' },
   
 
 
@@ -44,6 +48,8 @@ const Seller_Home = () => {
         <div key={photo.id} style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', textAlign: 'center' }}>
           <img src={photo.src} alt={photo.name} style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '10px' }} />
           <div style={{ fontWeight: 'bold' }}>{photo.name}</div>
+          <div style={{ fontWeight: 'bold' }}>{photo.name1}</div>
+
         </div>
       ))}
     </div>

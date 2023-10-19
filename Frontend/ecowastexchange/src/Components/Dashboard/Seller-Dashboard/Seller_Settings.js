@@ -50,7 +50,11 @@ const Seller_Settings = () => {
             <div class="photo">
               
               <img src={seller} alt="" />
-                
+              <button
+              type="Edit_profile"
+              className="Edit_profile"
+
+            >Edit Profile</button>
               </div>
     
     
