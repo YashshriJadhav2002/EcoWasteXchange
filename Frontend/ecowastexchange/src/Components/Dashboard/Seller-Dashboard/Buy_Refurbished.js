@@ -29,7 +29,7 @@ function Buy_Refurbished() {
       </div>
       </div>
       <div className='defectretrivedtext'>
-      <text style={{"font-weight": "bold"}}>Defect Resolved</text>
+      <text style={{"font-weight": "bold"}}>Defects Resolved</text>
       <br></br>
       <textarea></textarea>
       </div>
