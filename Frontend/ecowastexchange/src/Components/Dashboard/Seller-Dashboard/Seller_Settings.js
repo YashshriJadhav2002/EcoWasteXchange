@@ -33,7 +33,7 @@ const Seller_Settings = () => {
             Email: data.Email,
             City: data.City,
             State: data.State,
-            Image: null,
+            Image: data.Avatar,
 
 
           }) 
@@ -49,8 +49,8 @@ const Seller_Settings = () => {
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={seller} alt="round-image" />
-              <input type="submit" value="Edit Profile" class="submit-button" />
+              <img src={seller} alt="" />
+                
               </div>
     
     
