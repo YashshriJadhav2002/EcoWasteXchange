@@ -49,11 +49,9 @@ const Seller_Settings = () => {
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={seller} alt="" />
-                
+              <img src={formData.Image} className="seller_profile" alt="" />
               </div>
-    
-    
+  
             <div class="contact-form">
               <form action="index.html" autocomplete="off">
                 <h3 class="title">User data</h3>

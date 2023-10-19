@@ -9,7 +9,8 @@ import '../../../Styles/DashboardHomePage.css';
 const Seller_Navbar = () => {
 
   const [data, setData] = useState('')
-  
+  const [profile,setProfile]=useState('')
+
   useEffect(()=> {
 
     const sellerInfo = localStorage.getItem("sellerInfo")
@@ -19,7 +20,9 @@ const Seller_Navbar = () => {
     {
 
       const sellerData = JSON.parse(sellerInfo)
+      
       setData(sellerData.Name)
+      setProfile(sellerData.Avatar)
     }
 
 })
@@ -72,7 +75,7 @@ const Seller_Navbar = () => {
           </div>
         )}
         <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
-          <img src='Logo.png' alt="" /><ArrowDropDownIcon />
+          <img src={profile} alt="" /><ArrowDropDownIcon />
         </a>
         {ProfileOpen && (
           <div className="dropdown-menu3">
