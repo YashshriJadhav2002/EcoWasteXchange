@@ -1,35 +1,24 @@
-
-import React from 'react';
-import { useState, useEffect, useRef } from 'react';
-import '../../../Styles/DashboardHomePage.css'
-
+import React, { useState, useEffect, useRef } from 'react';
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import '../../../Styles/DashboardHomePage.css';
 
 const Seller_Navbar = () => {
+  const [data, setData] = useState('');
+  const [profile, setProfile] = useState('');
 
-  const [data, setData] = useState('')
-  const [profile,setProfile]=useState('')
+  useEffect(() => {
+    const sellerInfo = localStorage.getItem("sellerInfo");
 
-  useEffect(()=> {
-
-    const sellerInfo = localStorage.getItem("sellerInfo")
-
-    
-    if(sellerInfo)
-    {
-
-      const sellerData = JSON.parse(sellerInfo)
-      
-      setData(sellerData.Name)
-      setProfile(sellerData.Avatar)
+    if (sellerInfo) {
+      const sellerData = JSON.parse(sellerInfo);
+      setData(sellerData.Name);
+      setProfile(sellerData.Avatar);
     }
-
-})
+  }, []);
 
   const [ProfileOpen, setProfileOptions] = useState(false);
   const [SellerOpen, setSellerOptions] = useState(false);
-  const dropdownContainerRef=useRef(null);
+  const dropdownContainerRef = useRef(null);
 
   const sellerOptions = ["Smartphones", "Earbud", "Laptop"];
   const settingOptions = ["Settings", "Logout"];
@@ -60,21 +49,19 @@ const Seller_Navbar = () => {
       </div>
       <div className='Welcome-seller'>
         <h2>WELCOME, {data}</h2>
-
-
       </div>
-      <div className="navbar-links-container3">
+      <div className="navbar-links-container3" ref={dropdownContainerRef}>
         <div className='sellgadgetname'>
-       <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget<ArrowDropDownIcon /></a>
-        {SellerOpen && (
-          <div className="dropdown-menu-sellergadget">
-            {sellerOptions.map((option, index) => (
-              <a href={option} key={option}>
-                {option}
-              </a>
-            ))}
-          </div>
-        )}
+          <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget<ArrowDropDownIcon /></a>
+          {SellerOpen && (
+            <div className="dropdown-menu-sellergadget">
+              {sellerOptions.map((option, index) => (
+                <a href={option} key={option}>
+                  {option}
+                </a>
+              ))}
+            </div>
+          )}
         </div>
         <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
           <img src={profile} className='profilephoto' alt="" /><ArrowDropDownIcon />
@@ -94,6 +81,3 @@ const Seller_Navbar = () => {
 };
 
 export default Seller_Navbar;
-
-
-
