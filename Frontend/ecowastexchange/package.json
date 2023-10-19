@@ -29,13 +29,10 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-<<<<<<< HEAD
   
     "extends" : "react-app"
-=======
    
-      "extends": "react-app"
->>>>>>> 20f39b94da1d77893c092e559395101a9ee98be8
+
     
   },
   "browserslist": {

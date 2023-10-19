@@ -49,16 +49,12 @@ const Seller_Settings = () => {
           <div class="sellersetting-container">
             <div class="photo">
               
-<<<<<<< HEAD
               <img src={seller} alt="" />
               <button
               type="Edit_profile"
               className="Edit_profile"
 
             >Edit Profile</button>
-=======
-              <img src={formData.Image} className="seller_profile" alt="" />
->>>>>>> 20f39b94da1d77893c092e559395101a9ee98be8
               </div>
   
             <div class="contact-form">
