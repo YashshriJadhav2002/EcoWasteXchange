@@ -1,23 +1,22 @@
 .image-upload-container {
     padding: 8vh;
     display: flex;
-    width: 20vw;
-    margin-left: 50px;
+    width: 40vw;
+    margin-left: 10vh;
     height: 80vh;
-    margin-top: 50px;
+    margin-top: 10vh;
     
 }
 
 .box-decoration {
     border:white;
     border-radius: 5px;
-    padding: 130px 100px;
+    padding: 80px 70px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
     align-items: center;
-    margin-left: 30px;
-
+    justify-content: center;
 }
 
 .image-upload-label {
@@ -32,11 +31,17 @@
     display: none;
 }
 
+.img-display-before{
+    width: 20vw;
+    height: 40vh;
+}
+
 .image-upload-button {
     background-color: #4CAF50;
     border: none;
     color: white;
     padding: 0.8rem 1.2rem;
+    width: 12vw;
     margin-top: 1rem;
     cursor: pointer;
     border-radius: 5px;
@@ -56,10 +61,10 @@
     display: flex;
     width:40vw;
     margin-top: -76vh;
-    padding-left: 5vh;
+    padding-left: 15vh;
     background-color: white;
     font-family: 'Abril Fatface', cursive;
-    margin-left: 80vh;
+    margin-left: 95vh;
     height:110vh; 
     border: 2px solid #ccc;
     border-radius: 5vh;
