@@ -14,10 +14,16 @@
   
   
 }
-.profile_image
+
+.profilephoto{
+  width: 8vw;
+  height: 10vh;
+}
+
+.photo img
 {
-  width: 40px;
-  height: 35px;
+  width: 50px;
+  height: auto;
   border-radius: 50%;
 
 }
