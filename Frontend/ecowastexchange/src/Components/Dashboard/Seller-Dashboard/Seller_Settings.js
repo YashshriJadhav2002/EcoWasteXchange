@@ -1,7 +1,7 @@
 import React from "react";
-import {useState, useEffect} from "react"
-import seller from "../../../Images/seller.jpg"
-import "../../../Styles/Seller_Settings.css"
+import {useState, useEffect} from "react";
+import seller from "../../../Images/seller.jpg";
+import "../../../Styles/Seller_Settings.css";
 import Seller_Navbar from "./Seller_Navbar";
 const Seller_Settings = () => {
 

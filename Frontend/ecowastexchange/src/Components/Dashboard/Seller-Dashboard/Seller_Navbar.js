@@ -1,6 +1,6 @@
 
-import React, { useRef } from 'react';
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { useState, useEffect, useRef } from 'react';
 import '../../../Styles/DashboardHomePage.css'
 
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -9,7 +9,6 @@ import '../../../Styles/DashboardHomePage.css';
 const Seller_Navbar = () => {
 
   const [data, setData] = useState('')
-  const [profile,setProfile]=useState('')
   
   useEffect(()=> {
 
@@ -21,7 +20,6 @@ const Seller_Navbar = () => {
 
       const sellerData = JSON.parse(sellerInfo)
       setData(sellerData.Name)
-      setProfile(sellerData.Avatar)
     }
 
 })
@@ -29,6 +27,7 @@ const Seller_Navbar = () => {
   const [ProfileOpen, setProfileOptions] = useState(false);
   const [SellerOpen, setSellerOptions] = useState(false);
   const dropdownContainerRef=useRef(null);
+
   const sellerOptions = ["Smartphones", "Earbud", "Laptop"];
   const settingOptions = ["Settings", "Logout"];
 
@@ -73,7 +72,7 @@ const Seller_Navbar = () => {
           </div>
         )}
         <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
-          <img src={profile} alt="" className='profile_image'/><ArrowDropDownIcon />
+          <img src='Logo.png' alt="" /><ArrowDropDownIcon />
         </a>
         {ProfileOpen && (
           <div className="dropdown-menu3">
