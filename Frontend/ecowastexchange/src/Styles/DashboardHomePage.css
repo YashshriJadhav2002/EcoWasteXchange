@@ -15,6 +15,12 @@
   
 }
 
+.sellgadgetname{
+  margin-top: 8vh;
+margin-left: -30vh;
+margin-bottom: -8vh;
+}
+
 .profilephoto{
   width: 8vw;
   height: 10vh;
@@ -60,8 +66,8 @@
 
 .dropdown-menu3 {
   position: absolute;
-  top: 9vh; /* Adjust the top position as needed */
-  right: 5vh;
+  margin-top: -1vh; /* Adjust the top position as needed */
+  right: 2vh;
    /* Add your desired background color */
   padding: 10px;
   display: flex;
@@ -74,8 +80,8 @@
 
 .dropdown-menu-sellergadget {
   position: absolute;
-  top: 9vh; /* Adjust the top position as needed */
-  right: 37vh;
+  margin-top: 0vh; /* Adjust the top position as needed */
+  margin-right: 3vh;
   padding: 10px;
   display: flex;
   flex-direction: column;

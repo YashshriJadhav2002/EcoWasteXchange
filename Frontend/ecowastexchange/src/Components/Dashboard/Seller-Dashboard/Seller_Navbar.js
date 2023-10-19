@@ -64,7 +64,8 @@ const Seller_Navbar = () => {
 
       </div>
       <div className="navbar-links-container3">
-        <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget<ArrowDropDownIcon /></a>
+        <div className='sellgadgetname'>
+       <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget<ArrowDropDownIcon /></a>
         {SellerOpen && (
           <div className="dropdown-menu-sellergadget">
             {sellerOptions.map((option, index) => (
@@ -74,6 +75,7 @@ const Seller_Navbar = () => {
             ))}
           </div>
         )}
+        </div>
         <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
           <img src={profile} className='profilephoto' alt="" /><ArrowDropDownIcon />
         </a>
