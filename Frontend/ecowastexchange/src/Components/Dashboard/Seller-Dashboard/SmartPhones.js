@@ -92,6 +92,7 @@ function SmartPhones() {
   return (
     <div>
       <Seller_Navbar></Seller_Navbar>
+
     <div className="image-upload-container">
       <div className="box-decoration">
         <label htmlFor="image-upload-input" className="image-upload-label">

@@ -3,12 +3,12 @@ import '../../../Styles/Buy_Refurbished.css';
 import phone from "../../../Images/phone_price.png";
 import Seller_Navbar from './Seller_Navbar';
 
-
 function Buy_Refurbished() {
   return (
 
     <div>
         <Seller_Navbar></Seller_Navbar>
+        
     <div className='buyitem-container'>
         <div className='buyproduct-image'>
       <img src={phone}></img> 
@@ -28,7 +28,13 @@ function Buy_Refurbished() {
       <text>100% Safe</text>
       </div>
       </div>
+      <div className='defectretrivedtext'>
+      <text style={{"font-weight": "bold"}}>Defect Resolved</text>
+      <br></br>
+      <textarea></textarea>
+      </div>
     </div>
+    
     </div>
   )
 }

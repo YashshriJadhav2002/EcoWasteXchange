@@ -10,7 +10,7 @@
     padding-left: 50vh;
     font-family: 'Abril Fatface', cursive;
     margin-bottom: 10px;
-    height:60vh;    
+    height:100vh;    
 }
 
 .buyproduct-image{
@@ -56,4 +56,9 @@
     margin-left: 20vh;
     margin-top: -5vh;
     height: 10vh;
+}
+
+.defectretrivedtext{
+    margin-left: -35vh;
+    margin-top: 10vh;
 }
