@@ -31,7 +31,7 @@ const Seller_Cart = () => {
         <Seller_Sidebar>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px', padding: '20px' }} >
       {photosData.map(photo => (
-        <div key={photo.id} style={{ backgroundColor: '#fff', border: '0.1vh solid #ddd', padding: '5vh', textAlign: 'center' }} className='devices'>
+        <div key={photo.id} style={{ backgroundColor: '#fff', border: '0.1vh solid #ddd', padding: '5vh', textAlign: 'center' }} className='devices' onClick={() =>window.location.href = '/BuyRefurbished'}>
           <img src={photo.src} alt={photo.name} style={{ maxWidth: '100%', height: 'auto', borderRadius: '1vh', marginBottom: '5vh' }} />
           <div style={{ fontWeight: 'bold' }}>{photo.name}</div>
           <div style={{ fontWeight: 'bold' }}>{photo.name1}</div>
