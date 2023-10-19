@@ -43,9 +43,9 @@ const Seller_Home = () => {
       <div>
        <Seller_Navbar> </Seller_Navbar>
       <Seller_Sidebar> 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px', padding: '20px' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px', padding: '20px' }} >
       {photosData.map(photo => (
-        <div key={photo.id} style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', textAlign: 'center' }}>
+        <div key={photo.id} style={{ backgroundColor: '#fff', border: '1px solid #ddd', padding: '15px', textAlign: 'center' }} className='devices'>
           <img src={photo.src} alt={photo.name} style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '10px' }} />
           <div style={{ fontWeight: 'bold' }}>{photo.name}</div>
           <div style={{ fontWeight: 'bold' }}>{photo.name1}</div>

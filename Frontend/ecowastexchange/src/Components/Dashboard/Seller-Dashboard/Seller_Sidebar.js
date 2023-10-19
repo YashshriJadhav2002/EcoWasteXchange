@@ -52,7 +52,7 @@ const Seller_Sidebar = ({children}) => {
                    ))
                }
            </div>
-           <main className='home-container' onClick={toggle}>{children}</main>
+           <main className='home-container' >{children}</main>
         </div>
     );
 };
