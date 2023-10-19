@@ -36,7 +36,8 @@ function Exact_Price() {
       <br></br>
       <h1 style={{"color":"red"}}>Rs.500</h1>
       <br></br>
-      <br></br>
+      <button className='sellbutton'>Sell</button>
+      
       <br></br>
       <text>Fast <br></br>Payments</text>
       <div className="verticleline">

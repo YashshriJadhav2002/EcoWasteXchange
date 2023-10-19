@@ -18,6 +18,7 @@ import Earbuds from './Components/Dashboard/Seller-Dashboard/Earbuds';
 import Laptop from './Components/Dashboard/Seller-Dashboard/Laptop';
 import Seller_Logout from './Components/Dashboard/Seller-Dashboard/Seller_Logout';
 import Exact_Price from './Components/Dashboard/Seller-Dashboard/Exact_Price';
+import Buy_Refurbished from './Components/Dashboard/Seller-Dashboard/Buy_Refurbished';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       <Route path="/ExactPrice" element={<Exact_Price/>}/>
       <Route path='/Settings' element={<Seller_Settings/>}/>
       <Route path='/Logout' element={<Seller_Logout/>} />
+      <Route path='/BuyRefurbished' element={<Buy_Refurbished/>} />
     </Routes>
     
     </div>
