@@ -49,7 +49,12 @@ const Seller_Settings = () => {
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={formData.Image} className="seller_profile" alt="" />
+              <img src={seller} alt="" />
+              <button
+              type="Edit_profile"
+              className="Edit_profile"
+
+            >Edit Profile</button>
               </div>
   
             <div class="contact-form">
