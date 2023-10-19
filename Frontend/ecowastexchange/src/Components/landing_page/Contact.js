@@ -60,23 +60,23 @@ const Contact = () => {
           <form action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="inputvalues-container">
-              <input type="text" name="name" class="contact-input" />
-              <label for="">Username</label>
+              <input type="text" placeholder="Name" class="contact-input" />
+              <label for=""></label>
               <span>Username</span>
             </div>
             <div class="inputvalues-container">
-              <input type="email" placeholder="email" class="contact-input" />
-              <label for="">Email</label>
+              <input type="email" placeholder="Email" class="contact-input" />
+              <label for=""></label>
               <span>Email</span>
             </div>
             <div class="inputvalues-container">
-              <input type="tel" name="phone" class="contact-input" />
-              <label for="">Phone</label>
+              <input type="tel" placeholder="Phone" class="contact-input" />
+              <label for=""></label>
               <span>Phone</span>
             </div>
             <div class="inputvalues-container textarea">
-              <textarea name="message" class="contact-input"></textarea>
-              <label for="">Message</label>
+              <textarea name="message" placeholder="Message" class="contact-input"></textarea>
+              <label for=""></label>
               <span>Message</span>
             </div>
             <input type="submit" value="Send" class="btn" />
