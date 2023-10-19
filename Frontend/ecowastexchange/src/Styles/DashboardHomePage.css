@@ -19,7 +19,12 @@
   width: 8vw;
   height: 10vh;
 }
+.profilephoto{
+  width: 4vw;
+  height: auto;
+  border-radius: 50%;
 
+}
 .photo img
 {
   width: 50px;
