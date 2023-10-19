@@ -41,16 +41,16 @@ const Contact = () => {
             <p>Connect with us :</p>
             <div class="social-icons">
               <a href="https://instagram.com/the_economic_times?igshid=MzRlODBiNWFlZA==">
-              <img src={instagram}  alt="" />
+              <img src={instagram}  alt="" style={{"width":"3vw"}}/>
               </a>
               <a href="https://twitter.com/">
-              <img src={twitter} alt="" />
+              <img src={twitter} alt="" style={{"width":"3vw"}}/>
               </a>
               <a href="https://www.facebook.com/EconomicTimes">
-              <img src={facebook} style={{ height: '5vh' }}alt="" />
+              <img src={facebook} alt="" style={{"width":"2.5vw"}} />
               </a>
               <a href="https://www.linkedin.com/in/rutuja-bhoyar-2953b7247">
-              <img src={linkedin} alt="" />
+              <img src={linkedin} alt="" style={{"width":"2.5vw"}} />
               </a>
             </div>
           </div>
