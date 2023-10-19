@@ -75,7 +75,7 @@ const Seller_Navbar = () => {
           </div>
         )}
         <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
-          <img src={profile} alt="" /><ArrowDropDownIcon />
+          <img src={profile} className='profilephoto' alt="" /><ArrowDropDownIcon />
         </a>
         {ProfileOpen && (
           <div className="dropdown-menu3">
