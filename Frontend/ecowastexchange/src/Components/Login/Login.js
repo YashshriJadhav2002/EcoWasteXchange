@@ -66,10 +66,10 @@ const Login = () => {
       }
 
       else if (page === "Vendor") {
-        window.location.href = '/'
+        window.location.href = '/VendorHome'
       }
       else {
-        window.location.href = '/'
+        window.location.href = '/CompanyHome'
       }
 
     }
