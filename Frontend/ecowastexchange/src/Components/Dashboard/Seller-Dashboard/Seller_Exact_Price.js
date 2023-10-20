@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../Styles/Exact_Price.css';
+import '../../../Styles/Seller_Exact_Price.css';
 import phone from "../../../Images/phone_price.png";
 import Seller_Navbar from './Seller_Navbar';
 import { useState,useEffect } from 'react';
@@ -79,7 +79,8 @@ function Exact_Price(props) {
       <br></br>
       <h1 style={{"color":"red"}}>Rs.500</h1>
       <br></br>
-      <br></br>
+      <button className='sellbutton'>Sell</button>
+      
       <br></br>
       <text>Fast <br></br>Payments</text>
       <div className="verticleline">

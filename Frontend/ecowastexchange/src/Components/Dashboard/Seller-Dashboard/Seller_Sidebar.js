@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import '../../../Styles/SellerDashboard.css'
+import '../../../Styles/Seller_Sidebar.css'
 
 
 import {

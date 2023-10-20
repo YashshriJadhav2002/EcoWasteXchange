@@ -15,7 +15,7 @@ main{
 .sidebar{
     background:  linear-gradient(to bottom , white , green);;
     color: black;
-    height: 100vh;
+    height: auto;
     width: 200px;
     transition: all 0.5s;
 }
@@ -51,4 +51,5 @@ main{
 .home-container{
     margin-top: 0vh;
     background-color: white;
+    margin-right: 0;
 }

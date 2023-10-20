@@ -13,11 +13,12 @@ import Seller_Home from './Components/Dashboard/Seller-Dashboard/Seller_Home';
 import Seller_Cart from './Components/Dashboard/Seller-Dashboard/Seller_Cart';
 import Seller_History from './Components/Dashboard/Seller-Dashboard/Seller_History';
 import Seller_Settings from './Components/Dashboard/Seller-Dashboard/Seller_Settings';
-import SmartPhones from './Components/Dashboard/Seller-Dashboard/SmartPhones';
-import Earbuds from './Components/Dashboard/Seller-Dashboard/Earbuds';
-import Laptop from './Components/Dashboard/Seller-Dashboard/Laptop';
+import SmartPhones from './Components/Dashboard/Seller-Dashboard/Seller_SmartPhones';
+import Earbuds from './Components/Dashboard/Seller-Dashboard/Seller_Earbuds';
+import Laptop from './Components/Dashboard/Seller-Dashboard/Seller_Laptop';
 import Seller_Logout from './Components/Dashboard/Seller-Dashboard/Seller_Logout';
-import Exact_Price from './Components/Dashboard/Seller-Dashboard/Exact_Price';
+import Exact_Price from './Components/Dashboard/Seller-Dashboard/Seller_Exact_Price';
+import Buy_Refurbished from './Components/Dashboard/Seller-Dashboard/Seller_Buy_Refurbished';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       <Route path="/ExactPrice" element={<Exact_Price/>}/>
       <Route path='/Settings' element={<Seller_Settings/>}/>
       <Route path='/Logout' element={<Seller_Logout/>} />
+      <Route path='/BuyRefurbished' element={<Buy_Refurbished/>} />
     </Routes>
     
     

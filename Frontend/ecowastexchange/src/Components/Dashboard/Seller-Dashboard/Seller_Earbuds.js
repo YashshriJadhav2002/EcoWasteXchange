@@ -141,10 +141,12 @@ return (
             />
           </div>
           <label>{formData.question3}</label>
-          <div>
-          <input type="radio" value="Yes" name="real-display" />Yes<br></br>
-            <input type="radio" value="No" name="real-display" /> No
-              
+          <div className="smartphone-input">
+            <input
+              type="text"
+              name="question3"
+              onChange={handleInputChange}
+            />
           </div>
           <label>{formData.question4}</label>
           <div>
@@ -162,7 +164,7 @@ return (
         </div>
         
         <div className="smartphone-submit-container">
-          <div className="smartphone-submit">Continue</div>
+        <button type='continue' className="smartphone-submit" onClick={() =>window.location.href = '/ExactPrice'}>Continue</button>
         </div>
       </form>
     </div>

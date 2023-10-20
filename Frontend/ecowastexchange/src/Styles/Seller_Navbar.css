@@ -5,7 +5,7 @@
   justify-content: space-between;
   min-height: 10vh;
   margin-left: 0vh;
-  margin-right: 0vh;
+  margin-right: 5vh;
   margin-top: 0vh;
 }
 .navbar-menu-container3 {
@@ -13,6 +13,30 @@
   margin-top: 0vh;
   
   
+}
+
+.sellgadgetname{
+  margin-top: 8vh;
+margin-left: -30vh;
+margin-bottom: -8vh;
+}
+
+.profilephoto{
+  width: 8vw;
+  height: 10vh;
+}
+.profilephoto{
+  width: 4vw;
+  height: auto;
+  border-radius: 50%;
+
+}
+.photo img
+{
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+
 }
 
 .navbar-links-container3 a {
@@ -32,13 +56,17 @@
   font-size: 1.15rem;
 }
 
+.devices:hover{
+  transform: scale(1.1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 
 
 .dropdown-menu3 {
   position: absolute;
-  top: 9vh; /* Adjust the top position as needed */
-  right: 5vh;
+  margin-top: -1vh; /* Adjust the top position as needed */
+  right: 2vh;
    /* Add your desired background color */
   padding: 10px;
   display: flex;
@@ -51,8 +79,8 @@
 
 .dropdown-menu-sellergadget {
   position: absolute;
-  top: 9vh; /* Adjust the top position as needed */
-  right: 37vh;
+  margin-top: 0vh; /* Adjust the top position as needed */
+  margin-right: 3vh;
   padding: 10px;
   display: flex;
   flex-direction: column;

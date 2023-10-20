@@ -1,7 +1,7 @@
 import React from "react";
-import {useState, useEffect} from "react"
-import seller from "../../../Images/seller.jpg"
-import "../../../Styles/Seller_Settings.css"
+import {useState, useEffect} from "react";
+import seller from "../../../Images/seller.jpg";
+import "../../../Styles/Seller_Settings.css";
 import Seller_Navbar from "./Seller_Navbar";
 const Seller_Settings = () => {
 
@@ -41,13 +41,14 @@ const Seller_Settings = () => {
               
               setFormData({
 
-                Name: data.data.Name,
-                Phone: data.data.Phone,
-                Address: data.data.Address,
-                Email: data.data.Email,
-                City: data.data.City,
-                State: data.data.State,
-                Avatar: data.data.Avatar, 
+            Name: data.Name,
+            Phone: data.Phone,
+            Address: data.Address,
+            Email: data.Email,
+            City: data.City,
+            State: data.State,
+            Image: null,
+
 
               })
 
@@ -67,11 +68,10 @@ const Seller_Settings = () => {
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={formData.Avatar} alt="" />
+              <img src={seller} alt="" />
                 
               </div>
-    
-    
+  
             <div class="contact-form">
               <form action="index.html" autocomplete="off">
                 <h3 class="title">User data</h3>
@@ -82,7 +82,7 @@ const Seller_Settings = () => {
                 </div>
                 <label for="">Phone Number</label>
                 <div class="inputvalues-container">
-                  <input type="tel" placeholder="phone" value={formData.Phone} class="contact-input" />
+                  <input type="tel" value={formData.Phone} class="contact-input" />
                 </div>
 
                 <label for="">Address</label>
@@ -105,7 +105,7 @@ const Seller_Settings = () => {
                 <input type="state" value={formData.State} class="contact-input" />
                 </div>
 
-                <input type="submit" value="Send" class="btn" />
+               
               </form>
             </div>
           </div>

@@ -180,6 +180,7 @@ function SmartPhones() {
   return (
     <div>
       <Seller_Navbar></Seller_Navbar>
+
     <div className="image-upload-container">
       <div className="box-decoration">
         <label htmlFor="image-upload-input" className="image-upload-label">
@@ -229,9 +230,13 @@ function SmartPhones() {
               onChange={handleInputChange}
             />
           </div>
+<<<<<<< HEAD:Frontend/ecowastexchange/src/Components/Dashboard/Seller-Dashboard/SmartPhones.js
           <span className='spanmsg'>{errors.BuyingPrice}</span>
 
           <label>Enter Age of the product</label>
+=======
+          <label>{formData.question3}</label>
+>>>>>>> 862083dbf0ce31ead80f652a1ab964a1b1a84a25:Frontend/ecowastexchange/src/Components/Dashboard/Seller-Dashboard/Seller_SmartPhones.js
           <div className="smartphone-input">
             <input
               type="text"

@@ -66,6 +66,9 @@ form {
   position: relative;
   
 }
+.contact-input::placeholder {
+  color: white;
+}
 
 .contact-input {
   width: 100%;
@@ -119,7 +122,7 @@ textarea.contact-input {
   outline: none;
   cursor: pointer;
   transition: 0.3s;
-  margin: 0;
+  margin-left: 1vh;
 }
 
 .btn:hover {
@@ -211,19 +214,20 @@ textarea.contact-input {
 .social-icons {
   display: flex;
   margin-top: 0.5rem;
- 
+  width: 1vw;
+  height: 2vh;
 }
 
 .social-icons a {
-  width: 35px;
-  height: 35px;
-  border-radius: 5px;
+  width: 5vw;
+  height: 1vh;
+  
   background: linear-gradient(45deg, white);
   color: #fff;
   text-align: center;
-  line-height: 35px;
+  
   margin-right: 0.5rem;
-  transition: 0.3s;
+  
   
 }
 

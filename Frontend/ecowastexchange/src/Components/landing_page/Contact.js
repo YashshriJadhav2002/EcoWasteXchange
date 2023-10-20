@@ -41,16 +41,16 @@ const Contact = () => {
             <p>Connect with us :</p>
             <div class="social-icons">
               <a href="https://instagram.com/the_economic_times?igshid=MzRlODBiNWFlZA==">
-              <img src={instagram}  alt="" />
+              <img src={instagram}  alt="" style={{"width":"3vw"}}/>
               </a>
               <a href="https://twitter.com/">
-              <img src={twitter} alt="" />
+              <img src={twitter} alt="" style={{"width":"3vw"}}/>
               </a>
               <a href="https://www.facebook.com/EconomicTimes">
-              <img src={facebook} style={{ height: '5vh' }}alt="" />
+              <img src={facebook} alt="" style={{"width":"2.5vw"}} />
               </a>
               <a href="https://www.linkedin.com/in/rutuja-bhoyar-2953b7247">
-              <img src={linkedin} alt="" />
+              <img src={linkedin} alt="" style={{"width":"2.5vw"}} />
               </a>
             </div>
           </div>
@@ -60,23 +60,23 @@ const Contact = () => {
           <form action="index.html" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="inputvalues-container">
-              <input type="text" name="name" class="contact-input" />
-              <label for="">Username</label>
+              <input type="text" placeholder="Name" class="contact-input" />
+              <label for=""></label>
               <span>Username</span>
             </div>
             <div class="inputvalues-container">
-              <input type="email" placeholder="email" class="contact-input" />
-              <label for="">Email</label>
+              <input type="email" placeholder="Email" class="contact-input" />
+              <label for=""></label>
               <span>Email</span>
             </div>
             <div class="inputvalues-container">
-              <input type="tel" name="phone" class="contact-input" />
-              <label for="">Phone</label>
+              <input type="tel" placeholder="Phone" class="contact-input" />
+              <label for=""></label>
               <span>Phone</span>
             </div>
             <div class="inputvalues-container textarea">
-              <textarea name="message" class="contact-input"></textarea>
-              <label for="">Message</label>
+              <textarea name="message" placeholder="Message" class="contact-input"></textarea>
+              <label for=""></label>
               <span>Message</span>
             </div>
             <input type="submit" value="Send" class="btn" />
