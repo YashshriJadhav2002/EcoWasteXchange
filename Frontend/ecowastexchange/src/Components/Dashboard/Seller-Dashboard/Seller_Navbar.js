@@ -5,26 +5,59 @@ import { useState, useEffect, useRef } from 'react';
 
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import '../../../Styles/Seller_Navbar.css';
+import { Avatar } from '@mui/material';
 
 const Seller_Navbar = () => {
-  const [data, setData] = useState('');
-  const [profile, setProfile] = useState('');
+  const [formData, setFormData] = useState({
+
+
+    Name:'',
+    Avatar:''
+
+  });
+ 
 
 
 
+  
   useEffect(()=> {
 
-    const sellerInfo = localStorage.getItem("sellerInfo")
+    const fetchUser = async() => {
 
-    
-    if(sellerInfo)
-    {
 
-      const sellerData = JSON.parse(sellerInfo)
-      setData(sellerData.Name)
+      const token = localStorage.getItem("auth-token")
+      const auth_token=JSON.parse(token)
+      const res=await fetch('/api/seller/profile',
+      {
+        method:"POST",
+        headers:
+        {
+        "Content-Type":"application/json",
+        },
+        body: JSON.stringify({
+          auth_token: auth_token
+        })
+      })
+
+        const data=await res.json()
+        if(res.status===200)
+        {
+          
+          setFormData({
+
+        Name: data.data.Name,
+        Avatar: data.data.Avatar,
+
+
+          })
+
+
+        }
     }
+    
+    fetchUser()
 
-})
+  }, [])
 
   const [ProfileOpen, setProfileOptions] = useState(false);
   const [SellerOpen, setSellerOptions] = useState(false);
@@ -58,7 +91,7 @@ const Seller_Navbar = () => {
         <img src='Logo.png' alt="" />
       </div>
       <div className='Welcome-seller'>
-        <h2>WELCOME, {data}</h2>
+        <h2>WELCOME, {formData.Name}</h2>
       </div>
       <div className="navbar-links-container3" ref={dropdownContainerRef}>
         <div className='sellgadgetname'>
@@ -74,7 +107,7 @@ const Seller_Navbar = () => {
           )}
         </div>
         <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
-          <img src={profile} className='profilephoto' alt="" /><ArrowDropDownIcon />
+          <img src={formData.Avatar} className='profilephoto' alt="" /><ArrowDropDownIcon />
         </a>
         {ProfileOpen && (
           <div className="dropdown-menu3">
