@@ -9,20 +9,6 @@ import '../../../Styles/DashboardHomePage.css';
 const Seller_Home = () => {
 
 
-  useEffect(()=> {
-
-      const sellerInfo = localStorage.getItem("sellerInfo")
-
-      
-      if(sellerInfo)
-      {
-
-        const data = JSON.parse(sellerInfo)
-        console.log(data.Name)
-        
-      }
-
-  })
     return (
       <div>
        <Seller_Navbar> </Seller_Navbar>

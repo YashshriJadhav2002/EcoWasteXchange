@@ -57,15 +57,11 @@ const Login = () => {
 
       })
      
-
-
-      localStorage.setItem("sellerInfo", JSON.stringify(data.data))
-      console.log(data);
+      console.log(data.data);
+      localStorage.setItem("auth-token", JSON.stringify(data.data))
+      
       window.alert(data.message)
       if (page === "Seller") {
-
-
-
         window.location.href = '/SellerHome'
       }
 

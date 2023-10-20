@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef  } from 'react';
 import '../../../Styles/DashboardHomePage.css'
 
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -8,21 +8,45 @@ import '../../../Styles/DashboardHomePage.css';
 
 const Seller_Navbar = () => {
 
-  const [data, setData] = useState('')
+      const [data, setData] = useState('')
 
-  useEffect(()=> {
 
-    const sellerInfo = localStorage.getItem("sellerInfo")
 
-    
-    if(sellerInfo)
-    {
+      useEffect(()=> {
 
-      const sellerData = JSON.parse(sellerInfo)
-      setData(sellerData.Name)
-    }
+        const fetchUser = async() => {
 
-})
+
+          const token = localStorage.getItem("auth-token")
+          const auth_token=JSON.parse(token)
+          const res=await fetch('/api/seller/profile',
+          {
+            method:"POST",
+            headers:
+            {
+            "Content-Type":"application/json",
+            },
+            body: JSON.stringify({
+              auth_token: auth_token
+            })
+          })
+
+            const data=await res.json()
+            if(res.status===200)
+            {
+              
+              setData(
+                data.data.Name
+              )
+
+
+            }
+        }
+        
+        fetchUser()
+
+      }, [])
+  
 
   const [ProfileOpen, setProfileOptions] = useState(false);
   const [SellerOpen, setSellerOptions] = useState(false);

@@ -47,6 +47,7 @@ function App() {
       <Route path='/Logout' element={<Seller_Logout/>} />
     </Routes>
     
+    
     </div>
   );
 }

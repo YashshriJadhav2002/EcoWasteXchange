@@ -10,6 +10,9 @@ const companyRegister = require('./routes/companyRegister')
 const companyLogin = require('./routes/companyLogin')
 const buyerLogin = require('./routes/buyerLogin')
 const sellerLogin = require('./routes/sellerLogin')
+const pricePrediction = require('./routes/pricePrediction')
+const product = require('./routes/exactPrice')
+const profile=require('./routes/seller_Profile')
 
 const app = express()
 
@@ -29,7 +32,9 @@ app.use('/api/company/register', companyRegister)
 app.use('/api/seller/login', sellerLogin)
 app.use('/api/buyer/login', buyerLogin)
 app.use('/api/company/login', companyLogin)
-
+app.use('/api/product/prediction', pricePrediction)
+app.use('/api/product/details', product)
+app.use('/api/seller/profile',profile)
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {
