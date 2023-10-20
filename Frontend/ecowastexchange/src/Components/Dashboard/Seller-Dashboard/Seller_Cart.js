@@ -1,12 +1,9 @@
 import React from 'react';
 import Seller_Sidebar from './Seller_Sidebar';
-import Seller_Home from './Seller_Home';
-import Seller_History from './Seller_History';
-import {Routes,Route} from 'react-router-dom';
 import Seller_Navbar from './Seller_Navbar';
 import phone from "../../../Images/phone_price.png"
 import About_us from "../../../Images/About_us.jpg"
-import '../../../Styles/DashboardHomePage.css';
+import '../../../Styles/Seller_Navbar.css';
 
 const photosData = [
   { id: 1, src: phone, name: 'Photo 1',name1:'Rs.30000' },

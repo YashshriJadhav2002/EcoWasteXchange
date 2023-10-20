@@ -140,7 +140,7 @@ function SmartPhones() {
               onChange={handleInputChange}
             />
           </div>
-          <label>{formData.question2}</label>
+          <label>{formData.question3}</label>
           <div className="smartphone-input">
             <input
               type="text"
