@@ -1,53 +1,10 @@
 import React from 'react'
 import '../../../Styles/Seller_Exact_Price.css';
 import phone from "../../../Images/phone_price.png";
-import Seller_Navbar from './Seller_Navbar';
-import { useState,useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import Vendor_Navbar from './Vendor_Navbar';
+import { useState } from 'react';
 
-function Exact_Price(props) {
-
-
-  const [_id, setId] = useState('')
-
-  setId(
-    props.id
-  )
-  const [detail, setDetails] = useState({
-
-    Name:"",
-    SellingPrice:"",
-    Avatar:""
-
-  }
-  )
-
-  useEffect(async ()=> {
-
-
-    
-    const res = await fetch('/api/product/details', {method: "POST", headers: {
-      'Content-Type':'application/json'
-    },
-    body: JSON.stringify({
-
-        _id : _id
-
-    })}
-    )
-
-    const data = res.json()
-
-    if(res.status === 200) {
-
-        console.log(data.message)
-
-    }
-
-
-    
-  })
-
+function  Vendor_Exact_Price() {
   const [accordionItems, setAccordionItems] = useState([
     { title: 'How did you calculate my device price?', content: 'We evaluate devices on the basis of their condition, age, supply, demand & value in the resale market. All these factors are accounted for by our AI mechanism to determine the best resale value of your device', isOpen: false },
     { title: 'Is it safe to sell my phone on EcoWasteXchange?', content: 'It’s the safest out there. First and foremost, we ensure your device data is erased completely. You will also receive an invoice for the transaction, as a proof of device ownership transfer.', isOpen: false },
@@ -68,7 +25,7 @@ function Exact_Price(props) {
   };
   return (
     <div>
-        <Seller_Navbar></Seller_Navbar>
+        <Vendor_Navbar></Vendor_Navbar>
     <div className='item-container'>
         <div className='product-image'>
       <img src={phone}></img> 
@@ -113,4 +70,4 @@ function Exact_Price(props) {
   )
 }
 
-export default Exact_Price
+export default  Vendor_Exact_Price

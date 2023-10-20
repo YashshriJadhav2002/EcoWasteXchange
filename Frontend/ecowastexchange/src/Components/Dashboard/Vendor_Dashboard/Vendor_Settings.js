@@ -2,8 +2,8 @@ import React from "react";
 import {useState, useEffect} from "react";
 import seller from "../../../Images/seller.jpg";
 import "../../../Styles/Seller_Settings.css";
-import Seller_Navbar from "./Seller_Navbar";
-const Seller_Settings = () => {
+import Vendor_Navbar from "./Vendor_Navbar";
+const Vendor_Settings = () => {
 
     
     const [formData, setFormData] = useState({
@@ -13,33 +13,19 @@ const Seller_Settings = () => {
         Email: '',
         City: '',
         State: '',
-        Avatar: null,
+        Image: null,
       });
     
-      useEffect(()=> {
+    useEffect(()=> {
 
-        const fetchUser = async() => {
-
-
-          const token = localStorage.getItem("auth-token")
-          const auth_token=JSON.parse(token)
-          const res=await fetch('/api/seller/profile',
-          {
-            method:"POST",
-            headers:
-            {
-            "Content-Type":"application/json",
-            },
-            body: JSON.stringify({
-              auth_token: auth_token
-            })
-          })
-
-            const data=await res.json()
-            if(res.status===200)
-            {
-              
-              setFormData({
+        const sellerInfo = localStorage.getItem("sellerInfo")
+  
+        
+        if(sellerInfo)
+        {
+  
+          const data = JSON.parse(sellerInfo)
+          setFormData({
 
             Name: data.Name,
             Phone: data.Phone,
@@ -47,29 +33,28 @@ const Seller_Settings = () => {
             Email: data.Email,
             City: data.City,
             State: data.State,
-            Image: null,
+            Image: data.Avatar,
 
 
-              })
-
-
-            }
+          }) 
         }
-        
-        fetchUser()
-
-      }, [])
+  
+    })
 
     return (
 
         <div >
-        <Seller_Navbar></Seller_Navbar>
+        <Vendor_Navbar></Vendor_Navbar>
           
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={formData.Avatar} alt="" />
-                
+              <img src={seller} alt="" />
+              <button
+              type="Edit_profile"
+              className="Edit_profile"
+
+            >Edit Profile</button>
               </div>
   
             <div class="contact-form">
@@ -113,4 +98,4 @@ const Seller_Settings = () => {
     )
 }
 
-export default Seller_Settings;
+export default Vendor_Settings;

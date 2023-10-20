@@ -1,30 +1,20 @@
-
-import React from 'react';
-import { useState, useEffect, useRef } from 'react';
-// import '../../../Styles/DashboardHomePage.css'
-
+import React, { useState, useEffect, useRef } from 'react';
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import '../../../Styles/Seller_Navbar.css';
 
-const Seller_Navbar = () => {
+const Vendor_Navbar = () => {
   const [data, setData] = useState('');
   const [profile, setProfile] = useState('');
 
+  useEffect(() => {
+    const sellerInfo = localStorage.getItem("sellerInfo");
 
-
-  useEffect(()=> {
-
-    const sellerInfo = localStorage.getItem("sellerInfo")
-
-    
-    if(sellerInfo)
-    {
-
-      const sellerData = JSON.parse(sellerInfo)
-      setData(sellerData.Name)
+    if (sellerInfo) {
+      const sellerData = JSON.parse(sellerInfo);
+      setData(sellerData.Name);
+      setProfile(sellerData.Avatar);
     }
-
-})
+  }, []);
 
   const [ProfileOpen, setProfileOptions] = useState(false);
   const [SellerOpen, setSellerOptions] = useState(false);
@@ -90,5 +80,5 @@ const Seller_Navbar = () => {
   );
 };
 
-export default Seller_Navbar;
+export default  Vendor_Navbar;
   
