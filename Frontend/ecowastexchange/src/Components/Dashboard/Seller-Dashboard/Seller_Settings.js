@@ -13,19 +13,33 @@ const Seller_Settings = () => {
         Email: '',
         City: '',
         State: '',
-        Image: null,
+        Avatar: null,
       });
     
-    useEffect(()=> {
+      useEffect(()=> {
 
-        const sellerInfo = localStorage.getItem("sellerInfo")
-  
-        
-        if(sellerInfo)
-        {
-  
-          const data = JSON.parse(sellerInfo)
-          setFormData({
+        const fetchUser = async() => {
+
+
+          const token = localStorage.getItem("auth-token")
+          const auth_token=JSON.parse(token)
+          const res=await fetch('/api/seller/profile',
+          {
+            method:"POST",
+            headers:
+            {
+            "Content-Type":"application/json",
+            },
+            body: JSON.stringify({
+              auth_token: auth_token
+            })
+          })
+
+            const data=await res.json()
+            if(res.status===200)
+            {
+              
+              setFormData({
 
             Name: data.Name,
             Phone: data.Phone,
@@ -33,13 +47,18 @@ const Seller_Settings = () => {
             Email: data.Email,
             City: data.City,
             State: data.State,
-            Image: data.Avatar,
+            Image: null,
 
 
-          }) 
+              })
+
+
+            }
         }
-  
-    })
+        
+        fetchUser()
+
+      }, [])
 
     return (
 
@@ -49,12 +68,8 @@ const Seller_Settings = () => {
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={seller} alt="" />
-              <button
-              type="Edit_profile"
-              className="Edit_profile"
-
-            >Edit Profile</button>
+              <img src={formData.Avatar} alt="" />
+                
               </div>
   
             <div class="contact-form">

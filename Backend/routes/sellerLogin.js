@@ -3,6 +3,7 @@ const express = require('express')
 const Seller = require('../models/sellerModel')
 const router = express.Router()
 const bcrypt=require('bcrypt')
+const jwt=require('jsonwebtoken')
 
 const { validationResult, body } = require('express-validator')
 //routes
@@ -30,8 +31,14 @@ router.post('/',[
 
             
         
-            if(response)
-            return res.status(200).json({message:"Login Successfull", data: seller})
+            if(response)  
+            {
+                const data={user:seller.id}
+                const token=jwt.sign(data,process.env.SECRET_KEY)
+
+                return res.status(200).json({message:"Login Successfull", data:token})
+
+            }  
             else
             return res.status(400).json({error:[{path:"Password",msg:"Incorrect Password"}]})
                     
