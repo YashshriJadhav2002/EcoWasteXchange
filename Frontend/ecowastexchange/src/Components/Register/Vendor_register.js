@@ -66,7 +66,7 @@ const VendorRegister = () => {
   const postData= async(e)=>{
     e.preventDefault()
 
-    if(errors.Image)
+    if(errors.Image=='')
     {
     const {Name,Email,Phone,Address,City,State,Password,Avatar}=formData;
 
@@ -80,7 +80,7 @@ const VendorRegister = () => {
   const data = await res.json()
   if(res.status===200)
   {
-    
+    console.log(data.message)
     window.alert(data.message)
     setErrors({Name: '',
     Phone: '',
