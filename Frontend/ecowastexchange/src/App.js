@@ -19,6 +19,11 @@ import Laptop from './Components/Dashboard/Seller-Dashboard/Seller_Laptop';
 import Seller_Logout from './Components/Dashboard/Seller-Dashboard/Seller_Logout';
 import Exact_Price from './Components/Dashboard/Seller-Dashboard/Seller_Exact_Price';
 import Buy_Refurbished from './Components/Dashboard/Seller-Dashboard/Seller_Buy_Refurbished';
+import Vendor_Exact_Price from './Components/Dashboard/Vendor_Dashboard/Vendor_Exact_Price';
+import Vendor_Home from './Components/Dashboard/Vendor_Dashboard/Vendor_Home';
+import Vendor_Cart from './Components/Dashboard/Vendor_Dashboard/Vendor_Cart';
+import Vendor_History from './Components/Dashboard/Vendor_Dashboard/Vendor_History';
+import Vendor_Buy_Refurbished from './Components/Dashboard/Vendor_Dashboard/Vendor_Buy_Refurbished';
 
 function App() {
   return (
@@ -47,6 +52,11 @@ function App() {
       <Route path='/Settings' element={<Seller_Settings/>}/>
       <Route path='/Logout' element={<Seller_Logout/>} />
       <Route path='/BuyRefurbished' element={<Buy_Refurbished/>} />
+      <Route path="/VendorExactPrice" element={<Vendor_Exact_Price/>}/>
+      <Route path="/VendorHome" element={<Vendor_Home/>}/>
+      <Route path="/VendorCart" element={<Vendor_Cart/>}/>     
+      <Route path="/VendorHistory" element={<Vendor_History/>}/>
+      <Route path='/VendorBuyRefurbished' element={<Vendor_Buy_Refurbished/>} />
     </Routes>
     
     </div>
