@@ -1,14 +1,11 @@
 import React, { useState, useRef } from "react";
 import '../../../Styles/SellerGadget.css';
 import Seller_Navbar from "./Seller_Navbar";
-import {Link} from 'react-router-dom';
-import Exact_Price from "./Exact_Price";
+
 
 function SmartPhones() {
     
     let name, buyingPrice, age, display, cond, second;
-
-    const [conditionMet, setConditionMet] = useState(false)
 
     const [id, setId] = useState('')
     const [productData, setProductData] = useState({
@@ -230,13 +227,7 @@ function SmartPhones() {
               onChange={handleInputChange}
             />
           </div>
-<<<<<<< HEAD:Frontend/ecowastexchange/src/Components/Dashboard/Seller-Dashboard/SmartPhones.js
-          <span className='spanmsg'>{errors.BuyingPrice}</span>
-
-          <label>Enter Age of the product</label>
-=======
-          <label>{formData.question3}</label>
->>>>>>> 862083dbf0ce31ead80f652a1ab964a1b1a84a25:Frontend/ecowastexchange/src/Components/Dashboard/Seller-Dashboard/Seller_SmartPhones.js
+          <label>What is the Age of your product</label>
           <div className="smartphone-input">
             <input
               type="text"

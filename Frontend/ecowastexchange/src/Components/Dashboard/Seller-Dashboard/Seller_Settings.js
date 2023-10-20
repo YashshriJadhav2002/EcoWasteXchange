@@ -68,7 +68,7 @@ const Seller_Settings = () => {
           <div class="sellersetting-container">
             <div class="photo">
               
-              <img src={seller} alt="" />
+              <img src={formData.Avatar} alt="" />
                 
               </div>
   

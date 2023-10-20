@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-import '../../../Styles/DashboardHomePage.css'
+// import '../../../Styles/DashboardHomePage.css'
 
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import '../../../Styles/Seller_Navbar.css';
