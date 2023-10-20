@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../Styles/Exact_Price.css';
+import '../../../Styles/Seller_Exact_Price.css';
 import phone from "../../../Images/phone_price.png";
 import Seller_Navbar from './Seller_Navbar';
 import { useState } from 'react';

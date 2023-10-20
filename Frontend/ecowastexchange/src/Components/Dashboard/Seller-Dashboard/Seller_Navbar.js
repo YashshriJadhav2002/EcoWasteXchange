@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import '../../../Styles/DashboardHomePage.css';
+import '../../../Styles/Seller_Navbar.css';
 
 const Seller_Navbar = () => {
   const [data, setData] = useState('');

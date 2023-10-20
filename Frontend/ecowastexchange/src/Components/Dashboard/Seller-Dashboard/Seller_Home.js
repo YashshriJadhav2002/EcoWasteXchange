@@ -4,7 +4,7 @@ import About_us from "../../../Images/About_us.jpg"
 
 import Seller_Sidebar from './Seller_Sidebar';
 import Seller_Navbar from './Seller_Navbar';
-import '../../../Styles/DashboardHomePage.css';
+import '../../../Styles/Seller_Navbar.css';
 
 const photosData = [
   { id: 1, src: phone, name: 'Photo 1',name1:'Rs.30000' },

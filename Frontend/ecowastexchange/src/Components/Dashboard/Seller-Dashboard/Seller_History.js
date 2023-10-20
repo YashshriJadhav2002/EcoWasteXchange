@@ -6,7 +6,7 @@ import Seller_Cart from './Seller_Cart';
 import {Routes,Route} from 'react-router-dom';
 import phone from "../../../Images/phone_price.png"
 import About_us from "../../../Images/About_us.jpg"
-import '../../../Styles/DashboardHomePage.css';
+import '../../../Styles/Seller_Navbar.css';
 
 const photosData = [
   { id: 1, src: phone, name: 'Photo 1',name1:'Rs.30000' },

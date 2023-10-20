@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../Styles/Buy_Refurbished.css';
+import '../../../Styles/Seller_Buy_Refurbished.css';
 import phone from "../../../Images/phone_price.png";
 import Seller_Navbar from './Seller_Navbar';
 
