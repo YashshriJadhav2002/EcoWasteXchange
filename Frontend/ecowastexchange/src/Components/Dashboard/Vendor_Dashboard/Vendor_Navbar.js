@@ -6,16 +6,7 @@ const Vendor_Navbar = () => {
   const [data, setData] = useState('');
   const [profile, setProfile] = useState('');
 
-  useEffect(() => {
-    const sellerInfo = localStorage.getItem("sellerInfo");
-
-    if (sellerInfo) {
-      const sellerData = JSON.parse(sellerInfo);
-      setData(sellerData.Name);
-      setProfile(sellerData.Avatar);
-    }
-  }, []);
-
+  
   const [ProfileOpen, setProfileOptions] = useState(false);
   const [SellerOpen, setSellerOptions] = useState(false);
   const dropdownContainerRef = useRef(null);
@@ -56,7 +47,7 @@ const Vendor_Navbar = () => {
           {SellerOpen && (
             <div className="dropdown-menu-sellergadget">
               {sellerOptions.map((option, index) => (
-                <a href={option} key={option}>
+                <a href={'Vendor'+option} key={option}>
                   {option}
                 </a>
               ))}
@@ -69,7 +60,7 @@ const Vendor_Navbar = () => {
         {ProfileOpen && (
           <div className="dropdown-menu3">
             {settingOptions.map((option, index) => (
-              <a href={option} key={option}>
+              <a href={'Vendor'+option} key={option}>
                 {option}
               </a>
             ))}

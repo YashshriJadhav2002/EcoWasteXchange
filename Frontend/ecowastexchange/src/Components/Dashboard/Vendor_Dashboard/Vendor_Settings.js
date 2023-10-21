@@ -16,30 +16,6 @@ const Vendor_Settings = () => {
         Image: null,
       });
     
-    useEffect(()=> {
-
-        const sellerInfo = localStorage.getItem("sellerInfo")
-  
-        
-        if(sellerInfo)
-        {
-  
-          const data = JSON.parse(sellerInfo)
-          setFormData({
-
-            Name: data.Name,
-            Phone: data.Phone,
-            Address: data.Address,
-            Email: data.Email,
-            City: data.City,
-            State: data.State,
-            Image: data.Avatar,
-
-
-          }) 
-        }
-  
-    })
 
     return (
 

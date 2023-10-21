@@ -39,4 +39,4 @@ function  Vendor_Buy_Refurbished() {
   )
 }
 
-export default  Vendor_Buy_Refurbished
+export default  Vendor_Buy_Refurbished;

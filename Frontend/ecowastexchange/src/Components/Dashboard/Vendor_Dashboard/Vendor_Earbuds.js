@@ -1,10 +1,11 @@
 import React, { useState, useRef } from "react";
 import '../../../Styles/SellerGadget.css';
+import Seller_Navbar from "./Vendor_Navbar";
 import Vendor_Navbar from "./Vendor_Navbar";
 
 
-function  Vendor_Laptop() {
-        
+function Vendor_Earbuds() {
+      
   let name, buyingPrice, age, display, cond, second;
   
   const [productData, setProductData] = useState({
@@ -197,5 +198,5 @@ return (
 );
 }
 
-export default  Vendor_Laptop;
+export default Vendor_Earbuds;
 
