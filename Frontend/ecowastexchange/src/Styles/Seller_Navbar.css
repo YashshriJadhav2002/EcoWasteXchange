@@ -16,7 +16,7 @@
 }
 
 .sellgadgetname{
-  margin-top: 1vh;
+  margin-top: 5vh;
 margin-left: -30vh;
 margin-bottom: -8vh;
 }
@@ -65,7 +65,7 @@ margin-bottom: -8vh;
 
 .dropdown-menu3 {
   position: absolute;
-  margin-top: 2vh; /* Adjust the top position as needed */
+  margin-top: -1vh; /* Adjust the top position as needed */
   right: 2vh;
    /* Add your desired background color */
   padding: 10px;

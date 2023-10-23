@@ -41,13 +41,13 @@ const Seller_Settings = () => {
               
               setFormData({
 
-            Name: data.Name,
-            Phone: data.Phone,
-            Address: data.Address,
-            Email: data.Email,
-            City: data.City,
-            State: data.State,
-            Image: null,
+                  Name: data.data.Name,
+                  Phone: data.data.Phone,
+                  Address: data.data.Address,
+                  Email: data.data.Email,
+                  City: data.data.City,
+                  State: data.data.State,
+                  Avatar: data.data.Avatar,
 
 
               })

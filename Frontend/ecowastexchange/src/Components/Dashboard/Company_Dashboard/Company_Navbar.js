@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import '../../../Styles/Seller_Navbar.css';
 
-const Vendor_Navbar = () => {
+const Company_Navbar = () => {
   const [data, setData] = useState('');
   const [profile, setProfile] = useState('');
 
@@ -43,25 +43,24 @@ const Vendor_Navbar = () => {
       </div>
       <div className="navbar-links-container3" ref={dropdownContainerRef}>
         <div className='sellgadgetname'>
-          <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget</a>
+          <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget<ArrowDropDownIcon /></a>
           {SellerOpen && (
             <div className="dropdown-menu-sellergadget">
               {sellerOptions.map((option, index) => (
-                <a href={'Vendor'+option} key={option}>
+                <a href={'Company'+option} key={option}>
                   {option}
                 </a>
               ))}
             </div>
           )}
         </div>
-        
         <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
-          <img src={profile} className='profilephoto' alt="" />
+          <img src={profile} className='profilephoto' alt="" /><ArrowDropDownIcon />
         </a>
         {ProfileOpen && (
           <div className="dropdown-menu3">
             {settingOptions.map((option, index) => (
-              <a href={'Vendor'+option} key={option}>
+              <a href={'Company'+option} key={option}>
                 {option}
               </a>
             ))}
@@ -72,5 +71,5 @@ const Vendor_Navbar = () => {
   );
 };
 
-export default  Vendor_Navbar;
+export default  Company_Navbar;
   

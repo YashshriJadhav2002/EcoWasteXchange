@@ -1,12 +1,12 @@
 import React, { useState, useRef } from "react";
 import '../../../Styles/SellerGadget.css';
-import Vendor_Navbar from "./Vendor_Navbar";
+import Company_Navbar from "./Company_Navbar";
 
 
-function  Vendor_Laptop() {
-        
+function Company_Earbuds() {
   let name, buyingPrice, age, display, cond, second;
-  
+
+  const [id, setId] = useState('')
   const [productData, setProductData] = useState({
 
     Name : '',
@@ -82,14 +82,90 @@ const handleContinue = async (e) => {
 
   e.preventDefault()
 
-  
+  const {Name, BuyingPrice, Age, isDisplay, isCond, isSecond, Avatar} = productData
+  const res = await fetch('/api/product/prediction', {method:'POST', 
+  headers: {
 
-    window.location.href = '/VendorExactPrice'
+    "Content-Type":"application/json",
+  
+  },
+  body: JSON.stringify({
+
+    Name, BuyingPrice, Age,isDisplay, isCond, isSecond, Avatar
+
+  })
     
+  
+})
+
+  const data = await res.json()
+  if(res.status===200) {
+
+
+    window.alert("Details saved successfully")
+    setId (data.id)
+    console.log(data.id)
+    setErrors({
+
+
+      Name : '',
+      BuyingPrice: '',
+      Age: '',
+      
+      isDisplay: '',
+      isCond: '',
+      isSecond: ''
+
+    })
+    window.location.href = '/CompanyExactPrice'
+    // setConditionMet(true)
+  //  return <Exact_Price id={data.id}/>
+
+
+  }
+  else {
+
+    console.log(productData)
+
+    for(let i=0; i<data.error.length; i++) {
+
+      if(data.error[i].path==="Name")
+      name="** "+data.error[i].msg
+    
+      else if(data.error[i].path==="BuyingPrice")
+      buyingPrice ="** "+data.error[i].msg
+
+      else if(data.error[i].path==="Age")
+      age="** "+data.error[i].msg
+      
+      
+      else if(data.error[i].path==="isDisplay")
+      display="** "+data.error[i].msg
+      
+      else if(data.error[i].path==="isCond")
+        cond="** "+data.error[i].msg
+
+      else if(data.error[i].path==="isSecond")
+      second="** "+data.error[i].msg
+
 
     }
 
-    
+    setErrors( {
+
+      Name : name,
+      BuyingPrice: buyingPrice,
+      Age: age,
+      isDisplay: display,
+      isCond: cond,
+      isSecond: second
+
+
+
+    })
+
+  }
+}
 
   
 
@@ -99,7 +175,7 @@ const handleClick = (event) => {
 
 return (
   <div>
-    <Vendor_Navbar></Vendor_Navbar>
+    <Company_Navbar></Company_Navbar>
 
   <div className="image-upload-container">
     <div className="box-decoration">
@@ -197,5 +273,5 @@ return (
 );
 }
 
-export default  Vendor_Laptop;
+export default Company_Earbuds;
 

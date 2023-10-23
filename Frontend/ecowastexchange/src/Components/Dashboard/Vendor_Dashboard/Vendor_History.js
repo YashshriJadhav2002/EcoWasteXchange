@@ -19,8 +19,6 @@ const photosData = [
   { id: 8, src: phone, name: 'Photo 4',name1:'Rs.30000' },
   
 
-
-
   // Add more photo objects as needed
 ];
 const  Vendor_History = () => {
@@ -28,15 +26,16 @@ const  Vendor_History = () => {
       <div>
       <Vendor_Navbar/>
       <Vendor_Sidebar>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '20px', padding: '20px' }} >
-      {photosData.map(photo => (
-        <div key={photo.id} style={{ backgroundColor: '#fff', border: '0.1vh solid #ddd', padding: '5vh', textAlign: 'center' }} className='devices'>
-          <img src={photo.src} alt={photo.name} style={{ maxWidth: '100%', height: 'auto', borderRadius: '1vh', marginBottom: '5vh' }} />
-          <div style={{ fontWeight: 'bold' }}>{photo.name}</div>
-          <div style={{ fontWeight: 'bold' }}>{photo.name1}</div>
-
-        </div>
-      ))}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '10vh', padding: '10vh' }}>
+        {photosData.map(photo => (
+        <div key={photo.id} style={{ display: 'flex', backgroundColor: 'rgb(152, 235, 152)', border: '0.1vh solid #ddd', padding: '5vh' }} className='devices' onClick={() => window.location.href = '/BuyRefurbished'}>
+        <img src={photo.src} style={{ maxWidth: '100%', height: 'auto', borderRadius: '1vh', marginBottom: '5vh' }} />
+        <div style={{ display: 'flex', flexDirection: 'column', marginLeft: '10vh', marginTop: '5vh' }}>
+        <span style={{ fontWeight: 'bold' }}>{photo.name}</span>
+        <span style={{ fontWeight: 'bold' }}>{photo.name1}</span>
+      </div>
+     </div>
+     ))}
     </div>
         </Vendor_Sidebar>
         </div>

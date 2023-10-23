@@ -1,13 +1,13 @@
 import React from 'react';
 import '../../../Styles/Seller_Buy_Refurbished.css';
 import phone from "../../../Images/phone_price.png";
-import Vendor_Navbar from './Vendor_Navbar';
+import Company_Navbar from './Company_Navbar';
 
-function  Vendor_Buy_Refurbished() {
+function Company_Buy_Refurbished() {
   return (
 
     <div>
-        <Vendor_Navbar></Vendor_Navbar>
+        <Company_Navbar></Company_Navbar>
         
     <div className='buyitem-container'>
         <div className='buyproduct-image'>
@@ -39,4 +39,4 @@ function  Vendor_Buy_Refurbished() {
   )
 }
 
-export default  Vendor_Buy_Refurbished;
+export default Company_Buy_Refurbished;
