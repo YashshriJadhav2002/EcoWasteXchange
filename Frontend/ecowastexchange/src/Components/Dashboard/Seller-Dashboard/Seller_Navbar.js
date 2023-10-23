@@ -1,8 +1,6 @@
 
 import React from 'react';
 import { useState, useEffect, useRef } from 'react';
-// import '../../../Styles/DashboardHomePage.css'
-
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import '../../../Styles/Seller_Navbar.css';
 import { Avatar } from '@mui/material';
@@ -95,7 +93,7 @@ const Seller_Navbar = () => {
       </div>
       <div className="navbar-links-container3" ref={dropdownContainerRef}>
         <div className='sellgadgetname'>
-          <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget<ArrowDropDownIcon /></a>
+          <a href="#" onClick={() => setSellerOptions(!SellerOpen)}>Sell Gadget</a>
           {SellerOpen && (
             <div className="dropdown-menu-sellergadget">
               {sellerOptions.map((option, index) => (
@@ -106,8 +104,9 @@ const Seller_Navbar = () => {
             </div>
           )}
         </div>
+        
         <a href="#" onClick={() => setProfileOptions(!ProfileOpen)}>
-          <img src={formData.Avatar} className='profilephoto' alt="" /><ArrowDropDownIcon />
+          <img src={formData.Avatar} className='profilephoto' alt="" />
         </a>
         {ProfileOpen && (
           <div className="dropdown-menu3">

@@ -1,9 +1,8 @@
 import React from 'react';
-import Seller_Sidebar from './Seller_Sidebar';
-import Seller_Home from './Seller_Home';
-import Seller_Navbar from './Seller_Navbar';
-import Seller_Cart from './Seller_Cart';
-import {Routes,Route} from 'react-router-dom';
+import Company_Sidebar from './Company_Sidebar';
+
+import Company_Navbar from './Company_Navbar';
+
 import phone from "../../../Images/phone_price.png"
 import About_us from "../../../Images/About_us.jpg"
 import '../../../Styles/Seller_Navbar.css';
@@ -23,11 +22,11 @@ const photosData = [
 
   // Add more photo objects as needed
 ];
-const Seller_History = () => {
+const Company_History = () => {
     return (
       <div>
-      <Seller_Navbar/>
-      <Seller_Sidebar>
+      <Company_Navbar/>
+      <Company_Sidebar>
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10vh', padding: '10vh' }}>
         {photosData.map(photo => (
         <div key={photo.id} style={{ display: 'flex', backgroundColor: 'rgb(152, 235, 152)', border: '0.1vh solid #ddd', padding: '5vh' }} className='devices' onClick={() => window.location.href = '/BuyRefurbished'}>
@@ -39,9 +38,9 @@ const Seller_History = () => {
      </div>
      ))}
     </div>
-        </Seller_Sidebar>
+        </Company_Sidebar>
         </div>
     );
 };
 
-export default Seller_History;
+export default Company_History;

@@ -34,7 +34,7 @@ const Navbar = () => {
         <a href="vision">Vision</a>
         <a href="contact">Contact</a>
         <a href="#" onClick={() => setLoginMenuOpen(!loginMenuOpen)}>
-          Login <ArrowDropDownIcon />
+          Login 
         </a>
         {loginMenuOpen && (
           <div className="dropdown-menu">
